@@ -1,3 +1,36 @@
+//*------- main index -------*//
+
+const logo = document.getElementById("logo");
+const menuLateral = document.querySelector(".menuLateral");
+const spans = document.querySelectorAll("span");
+const menuLogo = document.querySelector(".menuLogo");
+const main = document.querySelector("main");
+
+menuLogo.addEventListener("click", ()=>{
+    menuLateral.classList.toggle("maxMenuLateral")
+    if(menuLateral.classList.contains("maxMenuLateral")){
+        menuLateral.children[0].style.display = "none";
+        menuLateral.children[1].style.display = "block";
+    } else{
+        menuLateral.children[0].style.display = "block";
+        menuLateral.children[1].style.display = "none";
+    } if(window.innerWidth<=320){
+        menuLateral.classList.add("miniMenuLateral")
+        main.classList.add("minMain");
+        spans.forEach(()=>{
+            span.classList.add("oculto");
+        })
+    }
+})
+
+logo.addEventListener("click", () => {
+    menuLateral.classList.toggle("miniMenuLateral");
+    main.classList.toggle("minMain")
+    spans.forEach((span) => {
+        span.classList.toggle("oculto");
+    })
+})
+
 // leer los datos
 const obtenerDatos = async () => {
     try {
