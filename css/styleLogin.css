@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #141420;
+}
+
+.ContenedorLogin {
+    border: 8px solid #2E2E4A;
+    border-radius: 10px;
+    width: 350px;
+    padding: 40px;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.FormularioLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.FormularioLogin h2 {
+    margin-bottom: 20px;
+    color: #ef0d0d;
+}
+
+.FormularioLogin span {
+    align-self: flex-start;
+    Font: system-ui, sans-serif;
+    color: #555;
+}
+
+#contraseña, #usuario {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(155, 149, 149) ;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#btnIngresar {
+    width: 100%;
+    padding: 12px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#btnIngresar:hover {
+    background: #764ba2;
+}
+
+#mensaje {
+    text-align: center;
+    font-weight: bold;
+    min-height: 20px;
+}
+
+#mensaje.exito {
+    color: green;
+}
+
+#mensaje.error {
+    color: red;
+}
+
+.FormularioLogin p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.FormularioLogin a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+}
