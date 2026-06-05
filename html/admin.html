@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- script js -->
+     <script src="/js/admin.js" defer></script>
+    <script src="/js/script.js" defer></script>
+    <!-- CDN Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- CDN Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- script iconos -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- link css -->
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <title>Peliculonas</title>
+</head>
+
+<body>
+
+    <div class="menuLogo">
+        <ion-icon name="menu-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
+
+    <aside class="menuLateral">
+
+        <div class="nombrePagina">
+            <img src="../images/logo.png" id="logo" class="lgoosinfondo" alt="Logo Peliculonas">
+            <span>Peliculonas</span>
+        </div>
+
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a class="ini" href="./index.html">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="gen" href="./generos.html">
+                        <ion-icon name="videocam-outline"></ion-icon>
+                        <span>Géneros</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="fav" href="./favoritos.html">
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <span>Favoritos</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="adm" href="./admin.html">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <span>Admin</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="linea"></div>
+
+        <div class="usuario">
+            <img src="/images/messi.jpg" alt="foto perfil">
+            <div class="infoUsuario">
+                <div class="nombre-rol">
+                    <span class="nombre">Santi</span>
+                    <span class="rol">Admin</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main>
+        <!-- Header -->
+        <header class="header-admin">
+            <div class="header-title-admin">
+                <h1>Administrador</h1>
+                <p>Bienvenido, admin. Aquí tienes un resumen general de tu catálogo</p>
+            </div>
+            
+        </header>
+        
+        <!-- Cards de info -->
+        <section class="contenedor-cards row-cols-1 row-cols-md-3 g-4">
+            <div class="card-admin">
+                <div class="icono-titulos">
+                    <ion-icon name="film-outline"></ion-icon>
+                </div>
+                <h6>Títulos totales</h6>
+                <p class="value">128</p>
+            </div>
+            <div class="card-admin">
+                <div class="icono-series">
+                    <ion-icon name="tv-outline"></ion-icon>
+                </div>
+                <h6>Series</h6>
+                <p class="value">62</p>
+            </div>
+            <div class="card-admin">
+                <div class="icono-peliculas">
+                    <ion-icon name="videocam-outline"></ion-icon>
+                </div>
+                <h6>Películas</h6>
+                <p class="value">66</p>
+            </div>
+            <div class="card-admin">
+                <div class="icono-resenia">
+                    <ion-icon name="star-outline"></ion-icon>
+                </div>
+                <h6>Reseñas</h6>
+                <p class="value">234</p>
+            </div>
+            <div class="card-admin">
+                <div class="icono-genero">
+                    <ion-icon name="pricetag-outline"></ion-icon>
+                </div>
+                <h6>Géneros</h6>
+                <p class="value">12</p>
+            </div>
+        </section>
+
+        <div class="linea"></div>
+        
+        <!-- Gráficos -->        
+        <section>
+            <div class="header-grafico-admin">
+                <h2>Graficos</h2>
+                <p>Acá podras aprecias unos gráficos ilustrativos de tu catálogo</p>
+            </div>
+            
+            <div class="grafico">
+                <div id="grafico1" class="grafico1"></div> 
+            </div>
+            <div class="grafico">
+                <div id="grafico2" class="grafico1"></div> 
+            </div>
+        </section>
+        
+        <div class="linea"></div>
+        
+        <!-- Tabla de admin Titulos -->
+        <div id="form-titulos-admin" class="header-titulos-admin">
+            <h2>Titulos</h2>
+            <p>Acá podras administrar todo tu catálogo</p>
+        </div>
+        <form id="formAgregarTitulo" novalidate>
+
+                <!-- Nombre -->
+                <div class="campo-grupo">
+                    <label for="input-nombre" class="campo-label">
+                        <ion-icon name="text-outline"></ion-icon>
+                        Nombre
+                    </label>
+                    <input
+                        type="text"
+                        class="campo-input"
+                        id="input-nombre"
+                        placeholder="Ej: Inception"
+                        required
+                    >
+                </div>
+
+                <!-- Tipo y Año -->
+                <div class="fila-doble">
+                    <div class="campo-grupo">
+                        <label for="input-tipo" class="campo-label">
+                            <ion-icon name="videocam-outline"></ion-icon>
+                            Tipo
+                        </label>
+                        <select class="campo-input campo-select" id="input-tipo" required>
+                            <option value="" disabled selected>Seleccioná...</option>
+                            <option value="película">Película</option>
+                            <option value="serie">Serie</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="input-anio" class="campo-label">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                            Año
+                        </label>
+                        <input
+                            type="number"
+                            class="campo-input"
+                            id="input-anio"
+                            placeholder="Ej: 2024"
+                            min="1900"
+                            max="2028"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <!-- Plataforma y Puntuación -->
+                <div class="fila-doble">
+                    <div class="campo-grupo">
+                        <label for="input-plataforma" class="campo-label">
+                            <ion-icon name="tv-outline"></ion-icon>
+                            Plataforma
+                        </label>
+                        <select class="campo-input campo-select" id="input-plataforma" required>
+                            <option value="" disabled selected>Seleccioná...</option>
+                            <option value="Netflix">Netflix</option>
+                            <option value="Max">Max</option>
+                            <option value="Prime">Prime Video</option>
+                            <option value="AppleTV">Apple TV+</option>
+                            <option value="Disney+">Disney+</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="input-puntuacion" class="campo-label">
+                            <ion-icon name="star-outline"></ion-icon>
+                            Puntuación (1–10)
+                        </label>
+                        <input
+                            type="number"
+                            class="campo-input"
+                            id="input-puntuacion"
+                            placeholder="Ej: 9"
+                            min="1"
+                            max="10"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <!-- Estado y Género ID -->
+                <div class="fila-doble">
+                    <div class="campo-grupo">
+                        <label for="input-estado" class="campo-label">
+                            <ion-icon name="checkmark-circle-outline"></ion-icon>
+                            Estado
+                        </label>
+                        <select class="campo-input campo-select" id="input-estado" required>
+                            <option value="" disabled selected>Seleccioná...</option>
+                            <option value="visto">Visto</option>
+                            <option value="viendo">Viendo</option>
+                            <option value="pendiente">Pendiente</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="input-generoId" class="campo-label">
+                            <ion-icon name="pricetag-outline"></ion-icon>
+                            Género ID
+                        </label>
+                        
+                        <input
+                            type="number"
+                            class="campo-input"
+                            id="input-generoId"
+                            placeholder="Ej: 1"
+                            min="1"
+                            required
+                            >
+                    </div>
+                </div>
+
+                <!-- URL Imagen -->
+                <div class="campo-grupo">
+                    <label for="input-imagen" class="campo-label">
+                        <ion-icon name="image-outline"></ion-icon>
+                        URL de la imagen
+                    </label>
+                    <input
+                        type="text"
+                        class="campo-input"
+                        id="input-imagen"
+                        placeholder="https://..."
+                        required
+                    >
+                </div>
+
+                <div class="linea-form"></div>
+                <p id="mensaje-exito" style="display:none; color: var(--accionPeligro);"> Completa Todos Los Campos</p>
+                <!-- Botones -->
+                <div class="form-botones">
+                      <button type="reset" class="btn-cancelar"> <ion-icon name="close-outline"></ion-icon>
+                        Cancelar</button>  
+                      <button id="btn-guardar" class="btn-guardar" onclick="agregarTitulo()">
+                        <ion-icon name="save-outline"></ion-icon>
+                        Guardar título
+                      </button>
+                </div>
+
+            </form>
+        <section class="contenedor-tablaTitulos-admin">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>IdPelicula</th>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Plataforma</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaTitulos-admin">
+                  
+                </tbody>
+            </table>
+        </section>
+
+        <div class="linea"></div>
+
+         <!-- Tabla de admin Genero -->
+        <div id="form-generos-admin" class="header-titulos-admin">
+            <h2>Géneros</h2>
+            <p>Acá podras administrar todos tus Géneros</p>
+        </div>
+        <form id="formAgregarGenero" novalidate>
+
+                <!-- Nombre -->
+                <div class="campo-grupo">
+                    <label for="input-nombre" class="campo-label">
+                        <ion-icon name="text-outline"></ion-icon>
+                        Nombre
+                    </label>
+                    <input
+                        type="text"
+                        class="campo-input"
+                        id="input-nombre-gen"
+                        placeholder="Ej: Inception"
+                        required
+                    >
+                </div>
+                <!-- Color -->
+                    <div class="campo-grupo">
+                        <label for="input-tipo" class="campo-label">
+                            <ion-icon name="color-palette-outline"></ion-icon>
+                            Color
+                        </label>
+                        <input type="color" class="campo-input-color campo-select" id="input-color-gen" required>
+                    </div>
+                </div>
+
+
+
+                <div class="linea-form"></div>
+                <p id="mensaje-exito" style="display:none; color: var(--estadoVisto);">✅ Título cargado correctamente</p>
+                <!-- Botones -->
+                <div class="form-botones">
+                      <button type="reset" class="btn-cancelar"> <ion-icon name="close-outline"></ion-icon>
+                        Cancelar</button>  
+                      <button id="btn-guardar-gen" class="btn-guardar-gen" onclick="agregarGenero()">
+                        <ion-icon name="save-outline"></ion-icon>
+                        Guardar Género
+                      </button>
+                </div>
+
+            </form>
+        <section class="contenedor-tablaTitulos-admin">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>IdGénero</th>
+                        <th>Nombre</th>
+                        <th>Color</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaGeneros-admin">
+                  
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <!-- Modal confirmación eliminar género -->
+<div id="modal-overlay-gen" class="contenedor-modal-generos">
+  <div class="modal-eliminar-genero">
+    <h3 class="h3-modal-generos">¿Eliminar género?</h3>
+    <p class="p-modal-genero">
+      <span class="atencion-span-modal">Atención!</span> Puede que <strong id="modal-nombre-gen"></strong> tenga Titulos asociados.
+    </p>
+    <div class="botones-modal-generos">
+      <button onclick="cerrarModalGen()" class="boton-cancelar-modal">Cancelar</button>
+      <button onclick="confirmarEliminarGen()" class="boton-eliminar-modal">Eliminar</button>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

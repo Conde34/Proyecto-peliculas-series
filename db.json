@@ -1,7 +1,7 @@
 {
   "titulos": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "Inception",
       "tipo": "película",
       "anio": 2010,
@@ -12,7 +12,7 @@
       "imagen": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "Interstellar",
       "tipo": "película",
       "anio": 2014,
@@ -23,7 +23,7 @@
       "imagen": "https://i.etsystatic.com/36541132/r/il/72181f/7047437338/il_fullxfull.7047437338_fncs.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "nombre": "Breaking Bad",
       "tipo": "serie",
       "anio": 2008,
@@ -34,7 +34,7 @@
       "imagen": "https://http2.mlstatic.com/D_NQ_NP_723381-MLA52911094563_122022-O.webp"
     },
     {
-      "id": 4,
+      "id": "4",
       "nombre": "Better Call Saul",
       "tipo": "serie",
       "anio": 2015,
@@ -45,18 +45,18 @@
       "imagen": "https://i.ebayimg.com/images/g/iUAAAOSwSxJjDKLb/s-l1200.jpg"
     },
     {
-      "id": 5,
+      "id": "5",
       "nombre": "The Office",
       "tipo": "serie",
       "anio": 2005,
-      "plataforma": "Prime Video",
+      "plataforma": "Prime",
       "puntuacion": 8,
       "estado": "visto",
       "generoId": 3,
       "imagen": "https://m.media-amazon.com/images/I/61faNOnBmtL._AC_UF894,1000_QL80_DpWeblab_.jpg"
     },
     {
-      "id": 6,
+      "id": "6",
       "nombre": "Superbad",
       "tipo": "película",
       "anio": 2007,
@@ -67,7 +67,7 @@
       "imagen": "https://m.media-amazon.com/images/I/51ZXeIXxbML._AC_UF894,1000_QL80_.jpg"
     },
     {
-      "id": 7,
+      "id": "7",
       "nombre": "The Dark Knight",
       "tipo": "película",
       "anio": 2008,
@@ -78,18 +78,18 @@
       "imagen": "https://http2.mlstatic.com/D_673797-MLA86227897269_062025-C.jpg"
     },
     {
-      "id": 8,
+      "id": "8",
       "nombre": "Severance",
       "tipo": "serie",
       "anio": 2022,
-      "plataforma": "Apple TV+",
+      "plataforma": "AppleTV",
       "puntuacion": 9,
       "estado": "viendo",
       "generoId": 1,
       "imagen": "https://m.media-amazon.com/images/M/MV5BZDI5YzJhODQtMzQyNy00YWNmLWIxMjUtNDBjNjA5YWRjMzExXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     },
     {
-      "id": 9,
+      "id": "9",
       "nombre": "Mindhunter",
       "tipo": "serie",
       "anio": 2017,
@@ -102,62 +102,63 @@
   ],
   "generos": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "Ciencia Ficción",
       "color": "#7C3AED"
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "Drama",
       "color": "#EF4444"
     },
     {
-      "id": 3,
+      "id": "3",
       "nombre": "Comedia",
       "color": "#F59E0B"
     },
     {
-      "id": 4,
+      "id": "4",
       "nombre": "Crimen y Suspenso",
       "color": "#10B981"
     }
   ],
   "resenas": [
     {
-      "id": 1,
+      "id": "1",
       "tituloId": 1,
       "texto": "Una obra maestra del cine moderno.",
       "fecha": "2025-07-08"
     },
     {
-      "id": 2,
+      "id": "2",
       "tituloId": 2,
       "texto": "La banda sonora de Hans Zimmer y el final te vuelan la cabeza.",
       "fecha": "2025-11-14"
     },
     {
-      "id": 3,
+      "id": "3",
       "tituloId": 3,
       "texto": "La mejor evolución de un personaje en la historia de la televisión.",
       "fecha": "2026-01-20"
     },
     {
-      "id": 4,
+      "id": "4",
       "tituloId": 5,
       "texto": "Ideal para poner de fondo o maratonear mil veces. Michael Scott es eterno.",
       "fecha": "2026-03-02"
     },
     {
-      "id": 5,
+      "id": "5",
       "tituloId": 7,
       "texto": "El Joker de Heath Ledger es insuperable. Una película de culto.",
       "fecha": "2026-04-15"
     },
     {
-      "id": 6,
+      "id": "6",
       "tituloId": 8,
       "texto": "Te atrapa desde el primer capítulo y la premisa es brillante.",
       "fecha": "2026-05-10"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
