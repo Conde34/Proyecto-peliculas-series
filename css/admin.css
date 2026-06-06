@@ -79,17 +79,38 @@
 }
 
 .card-admin {
-  background: var(--textoPrimario);
-  border: 1px solid #e5e7eb;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
   border-radius: 12px;
   padding: 1.25rem 1.5rem;
   display: inline-flex;
-  flex-direction: column;
-  gap: 6px;
-  width: 180px;
-  margin: 25px;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  width: 220px;
+  margin: 12px;
 }
 
+.card-admin-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.card-admin h6 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--textoPrimario);
+}
+
+.card-admin .value {
+  font-size: 26px;
+  color: var(--textoSecundario);
+  margin: 0;
+  line-height: 1;
+  font-weight: 400;
+}
 
 .card-admin .icono-titulos {
   width: 40px;
@@ -151,13 +172,6 @@
   margin-bottom: 8px;
 }
 
-.card-admin .value {
-  font-size: 28px;
-  font-weight: 500;
-  color: #111827;
-  margin: 0;
-  line-height: 1;
-}
 
 .linea {
   width: 100%;

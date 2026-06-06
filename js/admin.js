@@ -567,3 +567,31 @@ const editarGeneros = async () => {
     console.log(error);
   }
 };
+
+
+
+const cargarCards = async () => {
+  const respuesta = await fetch("../db.json");
+  const datos = await respuesta.json();
+
+  const titulos = datos.titulos;
+  const generos = datos.generos;
+  const resenas = datos.resenas;
+
+  const totalTitulos = titulos.length;
+  const totalSeries = titulos.filter((t) => t.tipo === "serie").length;
+  const totalPeliculas = titulos.filter((t) => t.tipo === "película").length;
+  const totalGeneros = generos.length;
+  const totalResenas = resenas.length;
+
+  document.getElementById("card-titulos-totales").textContent = totalTitulos;
+  document.getElementById("card-series").textContent = totalSeries;
+  document.getElementById("card-peliculas").textContent = totalPeliculas;
+  document.getElementById("card-generos").textContent = totalGeneros;
+  document.getElementById("card-resenas").textContent = totalResenas;
+};
+
+document.addEventListener("DOMContentLoaded", cargarCards);
+
+
+

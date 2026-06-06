@@ -98,6 +98,17 @@
       "estado": "pendiente",
       "generoId": 4,
       "imagen": "https://images.squarespace-cdn.com/content/v1/5cdc39398d97405389c07510/1557943552707-JT6HXYGBOEO161J6IALX/ChelseaLowe_Mindhunter_web.jpg?format=1500w"
+    },
+    {
+      "nombre": "Peaky Blinder",
+      "tipo": "serie",
+      "anio": "2013",
+      "plataforma": "AppleTV",
+      "puntuacion": "6",
+      "estado": "pendiente",
+      "generoId": "5",
+      "imagen": "https://i.ebayimg.com/images/g/LCwAAOSwzzNl2Iva/s-l1200.jpg",
+      "id": "10"
     }
   ],
   "generos": [
@@ -120,6 +131,11 @@
       "id": "4",
       "nombre": "Crimen y Suspenso",
       "color": "#10B981"
+    },
+    {
+      "nombre": "Terror",
+      "color": "#e10e0e",
+      "id": "5"
     }
   ],
   "resenas": [
