@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- script js -->
-    <script src="/js/inicio.js" defer></script>
+    <script src="/js/titulo.js" defer></script>
     <!-- script iconos -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -74,56 +74,64 @@
             </div>
         </div>
     </aside>
+
     <main>
         <!-- Header -->
         <header class="header">
-
             <div class="encabezado">
                 <div class="header-title">
-                    <h1>Mis Títulos</h1>
-                    <p>Explora y gestiona tu catálogo personal</p>
+                    <h1>Detalles del Título</h1>
                 </div>
             </div>
-
-            <div class="selects">
-                <input type="search" name="buscador" class="inputSearch" placeholder="Buscar titulo...">
-
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Todos los tipos</option>
-                    <option value="peliculas">Peliculas</option>
-                    <option value="series">Series</option>
-                </select>
-
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Todos las plataformas</option>
-                    <option value="netflix">Netflix</option>
-                    <option value="max">Max</option>
-                    <option value="primeVideo">Prime video</option>
-                </select>
-
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Todos los estados</option>
-                    <option value="visto">Visto</option>
-                    <option value="enCurso">En curso</option>
-                    <option value="pendiente">Pendiente</option>
-                </select>
-
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Todos los generos</option>
-                    <option value="visto">Ciencia ficcion</option>
-                    <option value="enCurso">Drama</option>
-                    <option value="enCurso">Comedia</option>
-                    <option value="pendiente">Crimen y Suspenso</option>
-                </select>
-
-            </div>
-
-            <br>
-
-            <div id="idTitulos">
-
-            </div>
         </header>
+
+        <!-- Tarjeta principal del título -->
+        <div class="titulo-detalle-container">
+            <div class="titulo-card">
+                <div class="titulo-imagen">
+                    <img id="tituloImagen" src="" alt="Imagen del título">
+                </div>
+                <div class="titulo-info">
+                    <h1 id="tituloNombre"></h1>
+                    <div class="titulo-meta">
+                        <span id="tituloAnio"></span>
+                        <span id="tituloPlataforma"></span>
+                        <span id="tituloTipo"></span>
+                    </div>
+                    <div class="titulo-genero">
+                        <span id="tituloGenero"></span>
+                    </div>
+                    <div class="titulo-rating">
+                        <span class="stars">★</span>
+                        <span id="tituloPuntuacion"></span>
+                    </div>
+                    <div class="titulo-estado">
+                        <span id="tituloEstado"></span>
+                    </div>
+                    <div class="titulo-acciones">
+                        <button class="action-btn"><ion-icon name="pencil-outline"></ion-icon> Editar</button>
+                        <button class="action-btn delete"><ion-icon name="trash-outline"></ion-icon> Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de reseñas -->
+        <div class="resenas-container">
+            <h2>Reseñas</h2>
+            <div id="listaResenas" class="resenas-lista">
+                <!-- Las reseñas se cargarán aquí -->
+            </div>
+
+            <!-- Formulario para agregar reseña -->
+            <div class="agregar-resena">
+                <h3>Agregar Reseña</h3>
+                <form id="formResena">
+                    <textarea id="textoResena" placeholder="Escribe tu reseña aquí..." rows="4" required></textarea>
+                    <button type="submit" class="btn-enviar">Enviar Reseña</button>
+                </form>
+            </div>
+        </div>
 
     </main>
 

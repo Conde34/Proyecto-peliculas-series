@@ -6,18 +6,18 @@ const spans = document.querySelectorAll("span");
 const menuLogo = document.querySelector(".menuLogo");
 const main = document.querySelector("main");
 
-menuLogo.addEventListener("click", ()=>{
+menuLogo.addEventListener("click", () => {
     menuLateral.classList.toggle("maxMenuLateral")
-    if(menuLateral.classList.contains("maxMenuLateral")){
+    if (menuLateral.classList.contains("maxMenuLateral")) {
         menuLateral.children[0].style.display = "none";
         menuLateral.children[1].style.display = "block";
-    } else{
+    } else {
         menuLateral.children[0].style.display = "block";
         menuLateral.children[1].style.display = "none";
-    } if(window.innerWidth<=320){
+    } if (window.innerWidth <= 320) {
         menuLateral.classList.add("miniMenuLateral")
         main.classList.add("minMain");
-        spans.forEach(()=>{
+        spans.forEach(() => {
             span.classList.add("oculto");
         })
     }
@@ -35,13 +35,24 @@ logo.addEventListener("click", () => {
 const obtenerDatos = async () => {
     try {
         const respuesta = await axios.get("http://localhost:3000/titulos");
+        const respuestaGeneros = await axios.get("http://localhost:3000/generos");
         const divTitulos = document.getElementById("idTitulos");
         const datos = respuesta.data;
+        const generos = respuestaGeneros.data;
+
+        // Crear un mapeo de generoId -> nombre
+        const generoMap = {};
+
+        generos.forEach(genero => {
+            generoMap[genero.id] = genero.nombre;
+        });
 
         datos.forEach(titulos => {
             const div = document.createElement("div");
+            const nombreGenero = generoMap[titulos.generoId] || "Sin género";
             div.innerHTML =
                 `
+                <a href="titulo.html?id=${titulos.id}">
             <div class="title-card">
                         <div class="card-poster">
                             <img class="card-poster" src="${titulos.imagen}">
@@ -57,14 +68,11 @@ const obtenerDatos = async () => {
                             <div style="margin-bottom: 10px;">
                                 <span class="card-status status-visto">${titulos.estado}</span>
                             </div>
-                            <span class="card-genre">${titulos.generoId}</span>
-                            <div class="card-actions">
-                                <button class="action-btn"><i class="fas fa-edit"></i></button>
-                                <button class="action-btn delete"><i class="fas fa-trash"></i></button>
-                            </div>
+                            <span class="card-genre">${nombreGenero}</span>
                         </div>
-                    </div>
-            `
+                        </div>
+            </a>
+                        `
             divTitulos.appendChild(div)
         });
     } catch (error) {
