@@ -348,6 +348,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 const agregarTitulo = async () => {
+  
   try {
     const nombre = document.getElementById("input-nombre").value;
     const tipo = document.getElementById("input-tipo").value;
