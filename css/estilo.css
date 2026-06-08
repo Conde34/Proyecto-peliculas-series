@@ -33,6 +33,21 @@ body {
 
 /* menu logo */
 
+.header-title{
+  color: var(--textoPrimario);
+}
+  
+  .inputSearch {
+  color: var(--textoPrimario);
+  padding: 10px;
+  border-radius: 8px;
+  background-color: var(--fondoBase);
+  border: 2px solid var(--borde);
+  
+}
+
+/* menu logo */
+
 .menuLogo {
   position: fixed;
   width: 50px;
@@ -132,6 +147,11 @@ body {
   margin-bottom: 5px;
 }
 
+.menuLateral .navegacion ul{
+  margin-left: -35px;
+}
+
+
 .menuLateral .navegacion a {
   width: 100%;
   height: 45px;
@@ -223,6 +243,127 @@ main.minMain {
   margin-left: 80px;
 }
 
+/* Selects */
+
+.selects{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.form-select{
+  color: var(--textoPrimario);
+  border: 2px solid var(--borde);
+  background-color: var(--fondoBase);
+  border-radius: 8px;
+}
+
+/* Tarjetas de títulos */
+
+#idTitulos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.title-card {
+  background-color: var(--superficie);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--borde);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.title-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(124, 58, 237, 0.3);
+}
+
+.card-poster {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.card-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--acentoPrimario);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.card-info {
+  padding: 15px;
+}
+
+.card-info h3 {
+  color: var(--textoPrimario);
+  font-size: 16px;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-meta {
+  color: var(--textoSecundario);
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.card-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.stars {
+  color: var(--estrellaspuntuacion);
+  font-size: 14px;
+}
+
+.rating-value {
+  color: var(--textoPrimario);
+  font-size: 12px;
+}
+
+.card-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.status-visto {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: var(--estadoVisto);
+}
+
+.card-genre {
+  display: block;
+  color: var(--acentoSuave);
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+
 /* Responsive */
 
 @media (max-height: 660px) {
@@ -257,3 +398,8 @@ main.minMain {
     margin-left: 0;
   }
 }
+
+/*---- Fin Pagina ----*/
+
+
+
