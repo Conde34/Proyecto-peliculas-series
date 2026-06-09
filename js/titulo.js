@@ -6,6 +6,7 @@ const spans = document.querySelectorAll("span");
 const menuLogo = document.querySelector(".menuLogo");
 const main = document.querySelector("main");
 
+// Menu hamburguesa
 menuLogo.addEventListener("click", () => {
     menuLateral.classList.toggle("maxMenuLateral")
     if (menuLateral.classList.contains("maxMenuLateral")) {
@@ -14,15 +15,10 @@ menuLogo.addEventListener("click", () => {
     } else {
         menuLateral.children[0].style.display = "block";
         menuLateral.children[1].style.display = "none";
-    } if (window.innerWidth <= 320) {
-        menuLateral.classList.add("miniMenuLateral")
-        main.classList.add("minMain");
-        spans.forEach(() => {
-            span.classList.add("oculto");
-        })
     }
 })
 
+// Menu colapsable desktop
 logo.addEventListener("click", () => {
     menuLateral.classList.toggle("miniMenuLateral");
     main.classList.toggle("minMain")
@@ -68,47 +64,128 @@ const cargarDetallesTitulo = async () => {
         document.getElementById("tituloTipo").textContent = titulo.tipo;
         document.getElementById("tituloGenero").textContent = generoMap[titulo.generoId] || "Sin género";
         document.getElementById("tituloPuntuacion").textContent = `${titulo.puntuacion}/10`;
-        document.getElementById("tituloEstado").textContent = titulo.estado;
 
-        // Cargar reseñas del título
-        const resenasTitulo = resenas.filter(r => r.tituloId == tituloId);
-        const listaResenas = document.getElementById("listaResenas");
+        const estadoEl = document.getElementById("tituloEstado");
+        estadoEl.textContent = titulo.estado;
+        if (titulo.estado === "visto") estadoEl.className = "estado-visto";
+        if (titulo.estado === "viendo") estadoEl.className = "estado-viendo";
+        if (titulo.estado === "pendiente") estadoEl.className = "estado-pendiente";
 
-        if (resenasTitulo.length === 0) {
-            listaResenas.innerHTML = "<p class='sin-resenas'>No hay reseñas aún.</p>";
-        } else {
-            listaResenas.innerHTML = resenasTitulo.map(resena => `
-                <div class="resena-item">
-                    <p class="resena-texto">${resena.texto}</p>
-                    <p class="resena-fecha">${new Date(resena.fecha).toLocaleDateString('es-ES')}</p>
-                </div>
-            `).join("");
-        }
-
-        // Configurar formulario para agregar reseña
-        const formResena = document.getElementById("formResena");
-        formResena.addEventListener("submit", async (e) => {
-            e.preventDefault();
-            const textoResena = document.getElementById("textoResena").value;
-            
-            try {
-                const nuevaResena = {
-                    tituloId: parseInt(tituloId),
-                    texto: textoResena,
-                    fecha: new Date().toISOString().split('T')[0]
-                };
-
-                await axios.post("http://localhost:3000/resenas", nuevaResena);
-                document.getElementById("textoResena").value = "";
-                cargarDetallesTitulo(); // Recargar las reseñas
-            } catch (error) {
-                console.log('Error al agregar reseña:', error);
-            }
-        });
+        // Filtrar y renderizar reseñas del título
+        const resenasTitulo = resenas.filter(r => String(r.tituloId) === String(tituloId));
+        renderizarResenas(resenasTitulo);
 
     } catch (error) {
         console.log('Error al cargar detalles:', error);
     }
 };
+
+// Renderizar reseñas
+const renderizarResenas = (resenas) => {
+    const listaResenas = document.getElementById("listaResenas");
+
+    if (resenas.length === 0) {
+        listaResenas.innerHTML = "<p class='sin-resenas'>No hay reseñas aún.</p>";
+        return;
+    }
+
+    listaResenas.innerHTML = resenas.map(resena => `
+        <div class="resena-item" id="resena-${resena.id}">
+            <div class="resena-header">
+                <div class="resena-usuario">
+                    <div class="resena-avatar">${resena.usuario ? resena.usuario[0].toUpperCase() : 'U'}</div>
+                    <div>
+                        <span class="resena-nombre">${resena.usuario || 'Usuario'}</span>
+                        <span class="resena-fecha">${new Date(resena.fecha).toLocaleDateString('es-ES')}</span>
+                    </div>
+                </div>
+                <div class="resena-acciones">
+                    <button class="btn-resena btn-editar" onclick="abrirModalEditar('${resena.id}', \`${resena.texto.replace(/`/g, "'")}\`)">
+                        <ion-icon name="pencil-outline"></ion-icon> Editar
+                    </button>
+                    <button class="btn-resena btn-eliminar" onclick="eliminarResena('${resena.id}')">
+                        <ion-icon name="trash-outline"></ion-icon> Eliminar
+                    </button>
+                </div>
+            </div>
+            <p class="resena-texto">${resena.texto}</p>
+        </div>
+    `).join("");
+};
+
+// Formulario agregar reseña
+document.getElementById("formResena").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const tituloId = obtenerIdTitulo();
+    const textoResena = document.getElementById("textoResena").value.trim();
+    const usuarioResena = document.getElementById("usuarioResena").value.trim() || "Usuario";
+
+    if (!textoResena) return;
+
+    try {
+        const nuevaResena = {
+            tituloId: parseInt(tituloId),
+            usuario: usuarioResena,
+            texto: textoResena,
+            fecha: new Date().toISOString().split('T')[0]
+        };
+
+        await axios.post("http://localhost:3000/resenas", nuevaResena);
+        document.getElementById("textoResena").value = "";
+        document.getElementById("usuarioResena").value = "";
+        cargarDetallesTitulo();
+    } catch (error) {
+        console.log('Error al agregar reseña:', error);
+    }
+});
+
+// Eliminar reseña
+const eliminarResena = async (resenaId) => {
+    const confirmar = confirm("¿Estás seguro de que querés eliminar esta reseña?");
+    if (!confirmar) return;
+
+    try {
+        await axios.delete(`http://localhost:3000/resenas/${resenaId}`);
+        cargarDetallesTitulo();
+    } catch (error) {
+        console.log('Error al eliminar reseña:', error);
+    }
+};
+
+// Abrir modal de edición
+const abrirModalEditar = (resenaId, textoActual) => {
+    document.getElementById("editResenaId").value = resenaId;
+    document.getElementById("editTextoResena").value = textoActual;
+    document.getElementById("modalEditar").classList.add("activo");
+};
+
+// Cerrar modal
+document.getElementById("btnCerrarModal").addEventListener("click", () => {
+    document.getElementById("modalEditar").classList.remove("activo");
+});
+
+// Cerrar modal al hacer click fuera
+document.getElementById("modalEditar").addEventListener("click", (e) => {
+    if (e.target === document.getElementById("modalEditar")) {
+        document.getElementById("modalEditar").classList.remove("activo");
+    }
+});
+
+// Guardar edición
+document.getElementById("formEditarResena").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const resenaId = document.getElementById("editResenaId").value;
+    const textoEditado = document.getElementById("editTextoResena").value.trim();
+
+    if (!textoEditado) return;
+
+    try {
+        await axios.patch(`http://localhost:3000/resenas/${resenaId}`, { texto: textoEditado });
+        document.getElementById("modalEditar").classList.remove("activo");
+        cargarDetallesTitulo();
+    } catch (error) {
+        console.log('Error al editar reseña:', error);
+    }
+});
 
 cargarDetallesTitulo();
