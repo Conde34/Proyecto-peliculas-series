@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #141420;
+}
+
+.ContenedorLogin {
+    width: 400px;
+    padding: 30px;
+    background-color: white;
+    border: 8px solid #2E2E4A;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.FormularioLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.FormularioLogin h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ef0d0d;
+}
+
+.FormularioLogin span {
+    color: #555;
+    font-size: 14px;
+}
+
+.FormularioLogin input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(155, 149, 149);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#btnRegistrar {
+    width: 100%;
+    padding: 12px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#btnRegistrar:hover {
+    background-color: #764ba2;
+}
+
+#mensaje {
+    text-align: center;
+    min-height: 20px;
+    font-weight: bold;
+}
+
+#mensaje.exito {
+    color: green;
+}
+
+#mensaje.error {
+    color: red;
+}
