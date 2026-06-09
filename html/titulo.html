@@ -4,19 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- script js -->
-    <script src="/js/titulo.js" defer></script>
-    <!-- script iconos -->
+    <script src="../js/titulo.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <!-- script axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <!-- link boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- link css -->
-    <link rel="stylesheet" href="../css/estilo.css">
-    <title>Proyecto-peliculas-series</title>
+    <link rel="stylesheet" href="../css/titulo.css">
+    <title>Detalle del Título - Peliculonas</title>
 </head>
 
 <body>
@@ -27,7 +22,6 @@
     </div>
 
     <aside class="menuLateral">
-
         <div class="nombrePagina">
             <ion-icon id="logo" name="play-outline"></ion-icon>
             <span>Peliculonas</span>
@@ -42,19 +36,13 @@
                     </a>
                 </li>
                 <li>
-                    <a class="gen" href="#">
+                    <a class="gen" href="genero.html">
                         <ion-icon name="videocam-outline"></ion-icon>
-                        <span>Genero</span>
+                        <span>Géneros</span>
                     </a>
                 </li>
                 <li>
-                    <a class="fav" href="#">
-                        <ion-icon name="heart-outline"></ion-icon>
-                        <span>Favoritos</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="adm" href="#">
+                    <a class="adm" href="admin.html">
                         <ion-icon name="person-outline"></ion-icon>
                         <span>Admin</span>
                     </a>
@@ -76,9 +64,12 @@
     </aside>
 
     <main>
-        <!-- Header -->
         <header class="header">
             <div class="encabezado">
+                <a href="index.html" class="btn-volver">
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                    Volver a Títulos
+                </a>
                 <div class="header-title">
                     <h1>Detalles del Título</h1>
                 </div>
@@ -95,7 +86,9 @@
                     <h1 id="tituloNombre"></h1>
                     <div class="titulo-meta">
                         <span id="tituloAnio"></span>
+                        <span class="meta-sep">•</span>
                         <span id="tituloPlataforma"></span>
+                        <span class="meta-sep">•</span>
                         <span id="tituloTipo"></span>
                     </div>
                     <div class="titulo-genero">
@@ -119,22 +112,43 @@
         <!-- Sección de reseñas -->
         <div class="resenas-container">
             <h2>Reseñas</h2>
-            <div id="listaResenas" class="resenas-lista">
-                <!-- Las reseñas se cargarán aquí -->
-            </div>
+            <div id="listaResenas" class="resenas-lista"></div>
 
             <!-- Formulario para agregar reseña -->
             <div class="agregar-resena">
                 <h3>Agregar Reseña</h3>
                 <form id="formResena">
+                    <input type="text" id="usuarioResena" placeholder="Tu nombre..." />
                     <textarea id="textoResena" placeholder="Escribe tu reseña aquí..." rows="4" required></textarea>
-                    <button type="submit" class="btn-enviar">Enviar Reseña</button>
+                    <button type="submit" class="btn-enviar">
+                        <ion-icon name="send-outline"></ion-icon> Enviar Reseña
+                    </button>
                 </form>
             </div>
         </div>
-
     </main>
 
-</body>
+    <!-- Modal editar reseña -->
+    <div id="modalEditar" class="modal-overlay">
+        <div class="modal-contenido">
+            <div class="modal-header">
+                <h3>Editar Reseña</h3>
+                <button id="btnCerrarModal" class="btn-cerrar-modal">
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
+            </div>
+            <form id="formEditarResena">
+                <input type="hidden" id="editResenaId">
+                <textarea id="editTextoResena" rows="5" required placeholder="Editá tu reseña..."></textarea>
+                <div class="modal-footer">
+                    <button type="button" id="btnCerrarModal2" class="btn-cancelar" onclick="document.getElementById('modalEditar').classList.remove('activo')">Cancelar</button>
+                    <button type="submit" class="btn-enviar">
+                        <ion-icon name="checkmark-outline"></ion-icon> Guardar cambios
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 
+</body>
 </html>

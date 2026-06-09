@@ -23,6 +23,8 @@ menuLogo.addEventListener("click", () => {
     }
 })
 
+// Menu responsive
+
 logo.addEventListener("click", () => {
     menuLateral.classList.toggle("miniMenuLateral");
     main.classList.toggle("minMain")

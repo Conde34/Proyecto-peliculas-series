@@ -176,5 +176,16 @@
       "fecha": "2026-05-10"
     }
   ],
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "santi",
+      "apellido": "conde",
+      "nombreUsu": "condeplay",
+      "correo": "prueba@gmail.com",
+      "contrasenia": "1234",
+      "rol": "admin"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

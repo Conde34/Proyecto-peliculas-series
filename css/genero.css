@@ -90,6 +90,13 @@ body {
 
 /* nombre y logo aside */
 
+.nombrePagina .logoSinFondo {
+  height: 50px;
+  width: 80px;
+  margin-left: -10px;
+  cursor: pointer;
+}
+
 .menuLateral .nombrePagina {
   width: 100%;
   height: 45px;
@@ -461,4 +468,8 @@ main.minMain {
 
 .btn-guardar:hover {
     background: var(--acentoSuave);
+}
+
+.add-btn {
+    display: none;
 }
