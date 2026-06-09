@@ -185,6 +185,15 @@
       "correo": "prueba@gmail.com",
       "contrasenia": "1234",
       "rol": "admin"
+    },
+    {
+      "nombre": "Luciano",
+      "apellido": "Sale",
+      "nombreUsu": "LuchoSale98",
+      "correo": "luchosale96@gmail.com",
+      "contrasenia": "lucianosale",
+      "rol": "usuario",
+      "id": "imDyQIvO3jQ"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
