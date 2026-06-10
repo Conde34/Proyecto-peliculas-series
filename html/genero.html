@@ -28,7 +28,7 @@
     <aside class="menuLateral">
 
         <div class="nombrePagina">
-            <img class="logoSinFondo" src="../images/logo.png" alt="Logo pagina">
+            <img id="logo" class="logoSinFondo" src="../images/logo.png" alt="Logo pagina">
             <span>Peliculonas</span>
         </div>
 
@@ -46,7 +46,7 @@
                         <span>Géneros</span>
                     </a>
                 </li>
-                <li>
+                <li id="liAdmin">
                     <a class="adm" href="admin.html">
                         <ion-icon name="person-outline"></ion-icon>
                         <span>Admin</span>
@@ -61,29 +61,29 @@
             <img src="/images/messi.jpg" alt="foto perfil">
             <div class="infoUsuario">
                 <div class="nombre-rol">
-                    <span class="nombre">Santi</span>
-                    <span class="rol">Admin</span>
+                    <span class="nombre" id="sidebarNombre">Santi</span>
+                    <span class="rol" id="sidebarRol">Admin</span>
                 </div>
+                <ion-icon id="btnCerrarSesion" name="log-out-outline" title="Cerrar sesión" style="cursor:pointer; font-size:20px; color:var(--textoSecundario); flex-shrink:0;"></ion-icon>
             </div>
         </div>
     </aside>
 <main class="pagina-genero">
 
     <header class="header">
-        <div>
+        <div class="titulo-generos">
             <h1>Géneros</h1>
             <p>Administra los géneros disponibles</p>
         </div>
         <button class="add-btn">+ Agregar Género</button>
     </header>
-
+    <div class="linea"></div>   
     <div class="tabla-container">
         <table class="tabla-generos">
             <thead>
                 <tr>
                     <th>GÉNERO</th>
                     <th>COLOR</th>
-                    <th>ACCIONES</th>
                 </tr>
             </thead>
             <tbody id="genreContainer"></tbody>
