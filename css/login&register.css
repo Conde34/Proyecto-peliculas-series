@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #141420; /* Tu fondo base oficial */
+    overflow: hidden;
+}
+
+/* Contenedor principal integrado con tu branding */
+.ContenedorLogin {
+    background-color: #1E1E30; /* Tu color de superficie */
+    border: 2px solid #2E2E4A; /* Tu color de borde */
+    border-radius: 16px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    width: 850px; /* Un toque más ancho para que luzcan las pelis */
+    max-width: 95%;
+    min-height: 560px;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.login-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.register-container {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.FormularioLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 40px;
+    background-color: #1E1E30; /* Superficie */
+    height: 100%;
+    justify-content: center;
+}
+
+.FormularioLogin h2 {
+    color: #F3F4F6; /* Texto Primario */
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.FormularioLogin span {
+    color: #9CA3AF; /* Texto Secundario */
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: -2px;
+}
+
+/* Inputs integrados con tu UI oscura */
+.FormularioLogin input {
+    width: 100%;
+    padding: 12px 14px;
+    background-color: #141420; /* Fondo base para contraste */
+    border: 1px solid #2E2E4A;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.FormularioLogin input:focus {
+    outline: none;
+    border-color: #7C3AED; /* Acento Primario */
+    box-shadow: 0 0 10px rgba(124, 58, 237, 0.2);
+}
+
+/* BOTÓN INICIAR SESIÓN (Degradado pro Violeta) */
+#btnIngresar {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #7C3AED 0%, #a78bfa 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+    transition: all 0.2s ease;
+}
+
+#btnIngresar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5);
+}
+
+/* BOTÓN REGISTRARSE (Degradado Potente Rosado/Violeta - Super visible) */
+#btnRegistrar {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #ec4899 0%, #7C3AED 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+    transition: all 0.2s ease;
+}
+
+#btnRegistrar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(236, 72, 153, 0.5);
+}
+
+#mensaje, #mensajeRegistro {
+    text-align: center;
+    min-height: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    margin-top: 10px;
+}
+#mensaje.exito, #mensajeRegistro.exito { color: #22C55E; }
+#mensaje.error, #mensajeRegistro.error { color: #EF4444; }
+
+/* =========================================================
+   ESTRUCTURA DEL MOSAICO DE PELÍCULAS DE FONDO
+   ========================================================= */
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 100;
+}
+
+.overlay {
+    background-color: #141420;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.overlay-panel {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(0);
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Grilla con los pósteres reales */
+.mosaico-peliculas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+    padding: 4px;
+    z-index: 1;
+}
+
+.mosaico-peliculas img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    opacity: 0.25; /* Transparencia para que se vea el texto encima sin molestar */
+    filter: grayscale(20%) brightness(70%);
+}
+
+/* Capa de contenido arriba de las imágenes */
+.overlay-contenido {
+    position: relative;
+    z-index: 5;
+    padding: 0 30px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.overlay-panel h3 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+}
+
+.overlay-panel p {
+    font-size: 14px;
+    margin-bottom: 25px;
+    line-height: 20px;
+    color: #D1D5DB;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+/* Botón Fantasma Modernizado */
+button.ghost {
+    background-color: rgba(20, 20, 32, 0.75); /* Fondo oscuro semitransparente estilo blur */
+    backdrop-filter: blur(4px);
+    border: 2px solid #7C3AED;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 12px 35px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+button.ghost:hover {
+    background-color: #7C3AED;
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+    transform: scale(1.05);
+}
+
+.overlay-left { transform: translateX(-20%); }
+.overlay-right { right: 0; transform: translateX(0); }
+
+/* REGLAS DE MOVIMIENTO */
+.ContenedorLogin.registro-activo .login-container { transform: translateX(100%); }
+.ContenedorLogin.registro-activo .register-container { transform: translateX(100%); opacity: 1; z-index: 5; }
+.ContenedorLogin.registro-activo .overlay-container { transform: translateX(-100%); }
+.ContenedorLogin.registro-activo .overlay { transform: translateX(50%); }
+.ContenedorLogin.registro-activo .overlay-left { transform: translateX(0); }
+.ContenedorLogin.registro-activo .overlay-right { transform: translateX(20%); }
+
+/* =========================================================
+   NOTIFICACIONES EMERGENTES (TOASTS) ULTRA MODERNAS
+   ========================================================= */
+
+/* Contenedor fijo en la esquina superior derecha */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Diseño base de la tarjeta flotante */
+.toast-alerta {
+    background-color: rgba(30, 30, 48, 0.85); /* Superficie de tu branding con transparencia */
+    backdrop-filter: blur(8px); /* Efecto vidrio esmerilado */
+    color: #F3F4F6; /* Texto primario */
+    padding: 16px 24px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    min-width: 300px;
+    
+    /* Animación de entrada por la derecha */
+    transform: translateX(120%);
+    animation: entrarToast 0.3s forwards;
+    transition: all 0.3s ease;
+}
+
+/* Variación si es un Error (Color Acción Peligro) */
+.toast-alerta.error {
+    border-left: 4px solid #EF4444; 
+    box-shadow: 0 10px 25px rgba(239, 68, 68, 0.15);
+}
+
+/* Variación si es un Éxito (Color Visto) */
+.toast-alerta.exito {
+    border-left: 4px solid #22C55E;
+    box-shadow: 0 10px 25px rgba(34, 197, 94, 0.15);
+}
+
+/* Animación de desvanecimiento cuando se va */
+.toast-alerta.salida {
+    transform: translateX(120%);
+    opacity: 0;
+}
+
+@keyframes entrarToast {
+    to {
+        transform: translateX(0);
+    }
+}
