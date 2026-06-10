@@ -16,7 +16,9 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- link css -->
     <link rel="stylesheet" href="../css/estilo.css">
-    <title>Proyecto-peliculas-series</title>
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+
+    <title>Inicio</title>
 </head>
 
 <body>
@@ -47,7 +49,7 @@
                         <span>Géneros</span>
                     </a>
                 </li>
-                <li>
+                <li id="liAdmin">
                     <a class="adm" href="/html/admin.html">
                         <ion-icon name="person-outline"></ion-icon>
                         <span>Admin</span>
@@ -62,10 +64,11 @@
             <img src="/images/messi.jpg" alt="foto perfil">
             <div class="infoUsuario">
                 <div class="nombre-rol">
-                    <span class="nombre">Santi</span>
-                    <span class="rol">Admin</span>
+                    <span class="nombre" id="sidebarNombre">Santi</span>
+                    <span class="rol" id="sidebarRol">Admin</span>
                 </div>
             </div>
+            <ion-icon id="btnCerrarSesion" name="log-out-outline" title="Cerrar sesión" style="cursor:pointer; font-size:20px; color:var(--textoSecundario); flex-shrink:0;"></ion-icon>
         </div>
     </aside>
     <main>
@@ -78,6 +81,7 @@
                     <p>Explora y gestiona tu catálogo personal</p>
                 </div>
             </div>
+            <div class="linea"></div>
 
             <div class="selects">
                 <input type="search" name="buscador" class="inputSearch" placeholder="Buscar titulo...">

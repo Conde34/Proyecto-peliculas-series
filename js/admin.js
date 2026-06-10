@@ -1,4 +1,21 @@
-// traigo los datos del db.json y hago el grafico
+// Protección: solo admin puede entrar
+const usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
+
+if (!usuarioLogueado || usuarioLogueado.rol !== "admin") {
+  window.location.href = "index.html";
+}
+
+// Sidebar: nombre, rol y cerrar sesión
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("sidebarNombre").textContent = usuarioLogueado.nombre;
+  document.getElementById("sidebarRol").textContent = usuarioLogueado.rol;
+  document.getElementById("btnCerrarSesion").addEventListener("click", () => {
+    localStorage.removeItem("usuarioLogueado");
+    window.location.href = "login.html";
+  });
+});
+
+// traer los datos del db.json y hacer el grafico
 async function cargarGraficoGeneros() {
   // traigo el archivo
   const respuesta = await fetch("../db.json");
@@ -348,7 +365,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 const agregarTitulo = async () => {
-  
   try {
     const nombre = document.getElementById("input-nombre").value;
     const tipo = document.getElementById("input-tipo").value;
@@ -358,11 +374,19 @@ const agregarTitulo = async () => {
     const estado = document.getElementById("input-estado").value;
     const generoId = document.getElementById("input-generoId").value;
     const imagen = document.getElementById("input-imagen").value;
-    
-    if ( !nombre || !tipo || !anio || !plataforma || !puntuacion || !estado || !generoId || !imagen) {
+
+    if (
+      !nombre ||
+      !tipo ||
+      !anio ||
+      !plataforma ||
+      !puntuacion ||
+      !estado ||
+      !generoId ||
+      !imagen
+    ) {
       alert("Por Favor, Complete todos los campos!");
-    }else{
-      
+    } else {
       const datos = {
         nombre,
         tipo,
@@ -373,7 +397,7 @@ const agregarTitulo = async () => {
         generoId,
         imagen,
       };
-  
+
       const response = await axios.post("http://localhost:3000/titulos", datos);
       document.getElementById("formAgregarTitulo").reset();
       alert("Titulo agregado exitosamente");
@@ -385,7 +409,6 @@ const agregarTitulo = async () => {
 };
 
 const eliminarTitulo = async (id) => {
-
   try {
     const response = await axios.delete(`http://localhost:3000/titulos/${id}`);
     obtenerTitulos();
@@ -482,27 +505,20 @@ obtenerGeneros();
 const agregarGenero = async () => {
   const nombre = document.getElementById("input-nombre-gen").value;
   const color = document.getElementById("input-color-gen").value;
-  if (
-    !nombre || 
-    !color 
-  ){
+  if (!nombre || !color) {
     alert("Por favor, completa todos los campos antes de guardar.");
-  }
-  else {
-       try {
-
-      
+  } else {
+    try {
       const datos = {
         nombre,
         color,
-        
       };
 
       const response = await axios.post("http://localhost:3000/generos", datos);
       document.getElementById("formAgregarGenero").reset();
-          alert("Género agregado exitosamente");
+      alert("Género agregado exitosamente");
     } catch (error) {
-    console.log(error);
+      console.log(error);
     }
     obtenerTitulos();
   }
@@ -533,11 +549,7 @@ const confirmarEliminarGen = async () => {
   }
 };
 
-const editarInputsGen = async (
-  id,
-  nombre,
-  color,
-) => {
+const editarInputsGen = async (id, nombre, color) => {
   window.location.href = "#form-generos-admin";
   document.getElementById("input-nombre-gen").value = nombre;
   document.getElementById("input-color-gen").value = color;
@@ -548,12 +560,11 @@ const editarInputsGen = async (
   btn.onclick = editarGeneros;
 };
 
-
 const editarGeneros = async () => {
   try {
     const nombre = document.getElementById("input-nombre-gen").value;
     const color = document.getElementById("input-color-gen").value;
-    
+
     const datos = {
       nombre,
       color,
@@ -568,8 +579,6 @@ const editarGeneros = async () => {
     console.log(error);
   }
 };
-
-
 
 const cargarCards = async () => {
   const respuesta = await fetch("../db.json");
@@ -593,6 +602,3 @@ const cargarCards = async () => {
 };
 
 document.addEventListener("DOMContentLoaded", cargarCards);
-
-
-
