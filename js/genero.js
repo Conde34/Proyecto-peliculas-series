@@ -1,13 +1,48 @@
+
+
+const logo = document.getElementById("logo");
+const menuLateral = document.querySelector(".menuLateral");
+const spans = document.querySelectorAll("span");
+const menuLogo = document.querySelector(".menuLogo");
+const main = document.querySelector("main");
+
+menuLogo.addEventListener("click", () => {
+  menuLateral.classList.toggle("maxMenuLateral");
+  if (menuLateral.classList.contains("maxMenuLateral")) {
+    menuLateral.children[0].style.display = "none";
+    menuLateral.children[1].style.display = "block";
+  } else {
+    menuLateral.children[0].style.display = "block";
+    menuLateral.children[1].style.display = "none";
+  }
+  if (window.innerWidth <= 320) {
+    menuLateral.classList.add("miniMenuLateral");
+    main.classList.add("minMain");
+    spans.forEach(() => {
+      span.classList.add("oculto");
+    });
+  }
+});
+
+// Menu responsive
+
+logo.addEventListener("click", () => {
+  menuLateral.classList.toggle("miniMenuLateral");
+  main.classList.toggle("minMain");
+  spans.forEach((span) => {
+    span.classList.toggle("oculto");
+  });
+});
+
+
 // Verificación de sesión
 if (!JSON.parse(localStorage.getItem("usuarioLogueado"))) {
   window.location.href = "login.html";
 }
 
 
-const API = "http://localhost:3000/generos";
 
-let editandoId = null;
-let editandoFila = null;
+const API = "http://localhost:3000/generos";
 
 const modalOverlay = document.getElementById("modalOverlay");
 
@@ -23,34 +58,8 @@ const crearFila = (genero) => {
                 ${genero.color}
             </div>
         </td>
-        <td>
-            <div class="acciones-cell">
-                <button class="btn-editar"><ion-icon name="pencil-outline"></ion-icon></button>
-                <button class="btn-eliminar"><ion-icon name="trash-outline"></ion-icon></button>
-            </div>
-        </td>
+       
     `;
-
-  // Eliminar
-  tr.querySelector(".btn-eliminar").addEventListener("click", async () => {
-    if (!confirm(`¿Eliminar "${genero.nombre}"?`)) return;
-    try {
-      await axios.delete(`${API}/${genero.id}`);
-      tr.remove();
-    } catch (error) {
-      console.log(error);
-    }
-  });
-
-  // Editar
-  tr.querySelector(".btn-editar").addEventListener("click", () => {
-    document.getElementById("inputNombre").value = genero.nombre;
-    document.getElementById("inputColor").value = genero.color;
-    document.getElementById("modaltitulo").textContent = "Editar Género";
-    editandoId = genero.id;
-    editandoFila = tr;
-    modalOverlay.classList.add("activo");
-  });
 
   return tr;
 };
@@ -75,8 +84,6 @@ document.querySelector(".add-btn").addEventListener("click", () => {
   document.getElementById("inputNombre").value = "";
   document.getElementById("inputColor").value = "#7c3aed";
   document.getElementById("modaltitulo").textContent = "Agregar Género";
-  editandoId = null;
-  editandoFila = null;
   modalOverlay.classList.add("activo");
 });
 
@@ -93,20 +100,10 @@ document.getElementById("btnGuardar").addEventListener("click", async () => {
   if (!nombre) return alert("Ingresá un nombre");
 
   try {
-    if (editandoId) {
-      const respuesta = await axios.put(`${API}/${editandoId}`, {
-        id: editandoId,
-        nombre,
-        color,
-      });
-      const nuevaFila = crearFila(respuesta.data);
-      editandoFila.replaceWith(nuevaFila);
-    } else {
-      const respuesta = await axios.post(API, { nombre, color });
-      document
-        .getElementById("genreContainer")
-        .appendChild(crearFila(respuesta.data));
-    }
+    const respuesta = await axios.post(API, { nombre, color });
+    document
+      .getElementById("genreContainer")
+      .appendChild(crearFila(respuesta.data));
 
     modalOverlay.classList.remove("activo");
   } catch (error) {
