@@ -267,6 +267,11 @@ main.minMain {
 
 /* Tarjetas de títulos */
 
+
+a{
+  text-decoration: none;
+}
+
 #idTitulos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -315,6 +320,7 @@ main.minMain {
 
 .card-info {
   padding: 15px;
+  text-decoration: none;
 }
 
 .card-info h3 {
