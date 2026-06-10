@@ -1,19 +1,42 @@
+
+function mostrarNotificacion(texto, tipo = "error") {
+    const contenedor = document.getElementById("toastContainer");
+    
+
+    const toast = document.createElement("div");
+    toast.className = `toast-alerta ${tipo}`;
+    
+
+    const icono = tipo === "error" ? "❌" : "✅";
+    toast.innerHTML = `<span>${icono}</span> <span>${texto}</span>`;
+    
+
+    contenedor.appendChild(toast);
+    
+
+    setTimeout(() => {
+        toast.classList.add("salida");
+        setTimeout(() => {
+            toast.remove();
+        }, 300); 
+    }, 3500);
+}
+
 const inputNombre = document.getElementById("nombre");
 const inputApellido = document.getElementById("apellido");
 const inputNombreUsu = document.getElementById("nombreUsu");
-const inputCorreo = document.getElementById("correo");
-const inputContrasenia = document.getElementById("contrasenia");
+const inputCorreoReg = document.getElementById('correo'); 
+const inputContraseniaReg = document.getElementById("contrasenia");
 
 const btnRegistrar = document.getElementById("btnRegistrar");
-const mensaje = document.getElementById("mensaje");
 
 btnRegistrar.addEventListener("click", async () => {
 
     const nombre = inputNombre.value.trim();
     const apellido = inputApellido.value.trim();
     const nombreUsu = inputNombreUsu.value.trim();
-    const correo = inputCorreo.value.trim();
-    const contrasenia = inputContrasenia.value.trim();
+    const correo = inputCorreoReg.value.trim();
+    const contrasenia = inputContraseniaReg.value.trim();
 
     if (
         nombre === "" ||
@@ -22,17 +45,12 @@ btnRegistrar.addEventListener("click", async () => {
         correo === "" ||
         contrasenia === ""
     ) {
-        mensaje.textContent = "Completa todos los campos";
-        mensaje.className = "error";
+        mostrarNotificacion("Completa todos los campos", "error");
         return;
     }
 
     try {
-
-        const respuesta = await axios.get(
-            "http://localhost:3000/usuarios"
-        );
-
+        const respuesta = await axios.get("http://localhost:3000/usuarios");
         const usuarios = respuesta.data;
 
         const usuarioExistente = usuarios.find(
@@ -40,9 +58,7 @@ btnRegistrar.addEventListener("click", async () => {
         );
 
         if (usuarioExistente) {
-
-            mensaje.textContent = "Ese correo ya está registrado";
-            mensaje.className = "error";
+            mostrarNotificacion("Ese correo ya está registrado", "error");
             return;
         }
 
@@ -55,25 +71,26 @@ btnRegistrar.addEventListener("click", async () => {
             rol: "usuario"
         };
 
-        await axios.post(
-            "http://localhost:3000/usuarios",
-            nuevoUsuario
-        );
+        await axios.post("http://localhost:3000/usuarios", nuevoUsuario);
 
-        mensaje.textContent = "Usuario registrado correctamente";
-        mensaje.className = "exito";
+        mostrarNotificacion("Usuario registrado correctamente", "exito");
 
         setTimeout(() => {
-
-            window.location.href = "login.html";
-
+            const contenedor = document.getElementById('contenedor-deslizable');
+            if(contenedor) {
+                contenedor.classList.remove("registro-activo");
+                
+               
+                inputNombre.value = "";
+                inputApellido.value = "";
+                inputNombreUsu.value = "";
+                inputCorreoReg.value = "";
+                inputContraseniaReg.value = ""; 
+            }
         }, 1500);
 
     } catch (error) {
-
         console.error(error);
-
-        mensaje.textContent = "Error al conectar con el servidor";
-        mensaje.className = "error";
+        mostrarNotificacion("Error al conectar con el servidor", "error");
     }
-}); 
+});
