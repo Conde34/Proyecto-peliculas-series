@@ -3,6 +3,7 @@ if (!JSON.parse(localStorage.getItem("usuarioLogueado"))) {
   window.location.href = "login.html";
 }
 
+
 const API = "http://localhost:3000/generos";
 
 let editandoId = null;

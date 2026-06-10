@@ -33,8 +33,12 @@ body {
 
 /* menu logo */
 
-.header-title{
+.header-title h1{
   color: var(--textoPrimario);
+}
+
+.header-title p{
+  color: var(--textoSecundario);
 }
   
   .inputSearch {
@@ -188,6 +192,13 @@ body {
 /* Linea */
 
 .menuLateral .linea {
+  width: 100%;
+  height: 2px;
+  background-color: var(--borde);
+  margin-bottom: 20px;
+}
+
+.linea {
   width: 100%;
   height: 2px;
   background-color: var(--borde);
