@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Películas - Acceso</title>
+    <link rel="stylesheet" href="../css/login&register.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+    <div id="toastContainer" class="toast-container"></div>
+    
+    <div class="ContenedorLogin" id="contenedor-deslizable">
+        
+        <div class="form-container register-container">
+            <form class="FormularioLogin" id="formularioRegister">
+                <h2>REGISTRARSE</h2>
+
+                <span>Nombre:</span>
+                <input type="text" id="nombre" placeholder="Ingresa tu nombre...">
+
+                <span>Apellido:</span>
+                <input type="text" id="apellido" placeholder="Ingresa tu apellido...">
+
+                <span>Nombre de Usuario:</span>
+                <input type="text" id="nombreUsu" placeholder="Ingresa tu usuario...">
+
+                <span>Correo Electrónico:</span>
+                <input type="email" id="correo" placeholder="Ingresa tu correo...">
+
+                <span>Contraseña:</span>
+                <input type="password" id="contrasenia" placeholder="Ingresa tu contraseña...">
+
+                <button type="button" id="btnRegistrar">REGISTRARSE</button>
+
+                <span id="mensajeRegistro"></span>
+            </form>
+        </div>
+
+        <div class="form-container login-container">
+            <form class="FormularioLogin" id="formularioLogin">
+                <h2>INICIAR SESIÓN</h2>
+                
+                <span>Correo Electrónico:</span>
+                <input type="text" id="usuario" placeholder="Ingresa tu correo electrónico...">
+                
+                <span>Contraseña:</span>
+                <input type="password" id="contraseña" placeholder="Ingresa tu contraseña...">
+                
+                <button type="button" id="btnIngresar">INICIAR SESIÓN</button>
+                
+                <span id="mensaje"></span>
+            </form>
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                
+                <div class="overlay-panel overlay-left">
+                    <div class="mosaico-peliculas">
+                        <img src="../images/imagenes login/anabelle.jpg" alt="Peli">
+                        <img src="../images/imagenes login/ghosFace.jpg" alt="Peli">
+                        <img src="../images/imagenes login/jaws.jpg" alt="Peli">
+                        <img src="../images/imagenes login/mIb.jpg" alt="Peli">
+                        
+                    </div>
+                    <div class="overlay-contenido">
+                        <h3>¿Ya tienes cuenta?</h3>
+                        <p>Inicia sesión para gestionar todo tu catálogo personal.</p>
+                        <button class="ghost" id="btnIrAlLogin">INICIAR SESIÓN</button>
+                    </div>
+                </div>
+
+                <div class="overlay-panel overlay-right">
+                    <div class="mosaico-peliculas">
+                  <img src="../images/imagenes register/bb.jpg" alt="Peli">
+                  <img src="../images/imagenes register/dahmer.jpg" alt="Peli">
+                  <img src="../images/imagenes register/jurassicPark.jpg" alt="Peli">
+                  <img src="../images/imagenes register/jason.jpg" alt="Peli">
+
+                        
+                    </div>
+                    <div class="overlay-contenido">
+                        <h3>¡Bienvenido!</h3>
+                        <p>Crea tu cuenta hoy y descubre un universo de películas y series.</p>
+                        <button class="ghost" id="btnIrAlRegistro">REGISTRARSE</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/js/login.js"></script>
+    <script src="/js/register.js"></script>
+
+    <script>
+        const btnIrAlRegistro = document.getElementById("btnIrAlRegistro");
+        const btnIrAlLogin = document.getElementById("btnIrAlLogin");
+        const contenedor = document.getElementById("contenedor-deslizable");
+
+        btnIrAlRegistro.addEventListener("click", () => {
+            contenedor.classList.add("registro-activo");
+        });
+
+        btnIrAlLogin.addEventListener("click", () => {
+            contenedor.classList.remove("registro-activo");
+        }); 
+    </script>
+</body>
+</html>
