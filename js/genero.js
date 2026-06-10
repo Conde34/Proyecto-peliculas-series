@@ -37,7 +37,7 @@ logo.addEventListener("click", () => {
 
 // Verificación de sesión
 if (!JSON.parse(localStorage.getItem("usuarioLogueado"))) {
-  window.location.href = "login.html";
+  window.location.href = "../html/index.html";
 }
 
 
@@ -130,5 +130,5 @@ if (usuarioLogueado) {
 
 btnCerrarSesion.addEventListener("click", () => {
   localStorage.removeItem("usuarioLogueado");
-  window.location.href = "login.html";
+  window.location.href = "../html/login&register.html";
 });

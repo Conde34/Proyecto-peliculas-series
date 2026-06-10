@@ -2,7 +2,7 @@
 
 // Verificación de sesión
 if (!JSON.parse(localStorage.getItem("usuarioLogueado"))) {
-  window.location.href = "login.html";
+  window.location.href = "login&register.html";
 }
 
 const logo = document.getElementById("logo");

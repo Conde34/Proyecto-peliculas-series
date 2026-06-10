@@ -194,6 +194,15 @@
       "contrasenia": "123456",
       "rol": "usuario",
       "id": "cSmzenJ2WcM"
+    },
+    {
+      "nombre": "Myriam",
+      "apellido": "Sanchez",
+      "nombreUsu": "MIMI",
+      "correo": "myrian@gmail.com",
+      "contrasenia": "lamasguapa",
+      "rol": "usuario",
+      "id": "1JFBapBImlI"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
