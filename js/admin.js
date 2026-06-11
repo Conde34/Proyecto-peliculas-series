@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("sidebarRol").textContent = usuarioLogueado.rol;
   document.getElementById("btnCerrarSesion").addEventListener("click", () => {
     localStorage.removeItem("usuarioLogueado");
-    window.location.href = "login.html";
+    window.location.href = "../html/login&register.html";
   });
 });
 
