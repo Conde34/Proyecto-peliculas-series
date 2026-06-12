@@ -633,8 +633,8 @@ const cargarCards = async () => {
   const resenas = datos.resenas;
 
   const totalTitulos = titulos.length;
-  const totalSeries = titulos.filter((t) => t.tipo === "serie").length;
-  const totalPeliculas = titulos.filter((t) => t.tipo === "película").length;
+  const totalSeries = titulos.filter((t) => t.tipo === "Serie").length;
+  const totalPeliculas = titulos.filter((t) => t.tipo === "Película").length;
   const totalGeneros = generos.length;
   const totalResenas = resenas.length;
 
