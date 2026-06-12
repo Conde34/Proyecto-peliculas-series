@@ -7,8 +7,8 @@
     <!-- axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- script js -->
-<script src="../js/script.js" defer></script>
-<script src="../js/genero.js" defer></script>
+    <script src="../js/script.js" defer></script>
+    <script src="../js/genero.js" defer></script>
     <!-- script iconos -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -64,50 +64,55 @@
                     <span class="nombre" id="sidebarNombre"></span>
                     <span class="rol" id="sidebarRol"></span>
                 </div>
-                <ion-icon id="btnCerrarSesion" name="log-out-outline" title="Cerrar sesión" style="cursor:pointer; font-size:20px; color:var(--textoSecundario); flex-shrink:0;"></ion-icon>
+                <ion-icon id="btnCerrarSesion" name="log-out-outline" title="Cerrar sesión"
+                    style="cursor:pointer; font-size:20px; color:var(--textoSecundario); flex-shrink:0;"></ion-icon>
             </div>
         </div>
     </aside>
-<main class="pagina-genero">
+    <main class="pagina-genero">
 
-    <header class="header">
-        <div class="titulo-generos">
-            <h1>Géneros</h1>
-            <p>Administra los géneros disponibles</p>
-        </div>
-        <button class="add-btn">+ Agregar Género</button>
-    </header>
-    <div class="linea"></div>   
-    <div class="tabla-container">
-        <table class="tabla-generos">
-            <thead>
-                <tr>
-                    <th>GÉNERO</th>
-                    <th>COLOR</th>
-                </tr>
-            </thead>
-            <tbody id="genreContainer"></tbody>
-        </table>
-    </div>
-</main>
+        <header class="header">
+            <div class="titulo-generos">
+                <h1>Géneros</h1>
+                <p>Administra los géneros disponibles</p>
+            </div>
+            <button class="add-btn">+ Agregar Género</button>
+        </header>
 
-<div class="modal-overlay" id="modalOverlay">
-    <div class="modal">
-        <h2 id="modaltitulo">Agregar Género</h2>
-        <div class="modal-campo">
-            <label>Nombre</label>
-            <input type="text" id="inputNombre" placeholder="Ej: Terror">
-        </div>
-        <div class="modal-campo">
-            <label>Color</label>
-            <input type="color" id="inputColor" value="#7c3aed">
-        </div>
-        <div class="modal-botones">
-            <button class="btn-cancelar" id="btnCancelar">Cancelar</button>
-            <button class="btn-guardar" id="btnGuardar">Guardar</button>
+        <div class="linea"></div>
+        <section style="display: flex;justify-content: center;">
+
+            <div class="tabla-container">
+                <table class="tabla-generos">
+                    <thead>
+                        <tr>
+                            <th>GÉNERO</th>
+                            <th>COLOR</th>
+                        </tr>
+                    </thead>
+                    <tbody id="genreContainer"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <h2 id="modaltitulo">Agregar Género</h2>
+            <div class="modal-campo">
+                <label>Nombre</label>
+                <input type="text" id="inputNombre" placeholder="Ej: Terror">
+            </div>
+            <div class="modal-campo">
+                <label>Color</label>
+                <input type="color" id="inputColor" value="#7c3aed">
+            </div>
+            <div class="modal-botones">
+                <button class="btn-cancelar" id="btnCancelar">Cancelar</button>
+                <button class="btn-guardar" id="btnGuardar">Guardar</button>
+            </div>
         </div>
     </div>
-</div>
 </body>
 
 </html>

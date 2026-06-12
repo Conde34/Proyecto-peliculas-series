@@ -3,7 +3,7 @@
     {
       "id": "1",
       "nombre": "Inception",
-      "tipo": "película",
+      "tipo": "Película",
       "anio": 2010,
       "plataforma": "Netflix",
       "puntuacion": 9,
@@ -14,7 +14,7 @@
     {
       "id": "2",
       "nombre": "Interstellar",
-      "tipo": "película",
+      "tipo": "Película",
       "anio": 2014,
       "plataforma": "Max",
       "puntuacion": 10,
@@ -25,7 +25,7 @@
     {
       "id": "3",
       "nombre": "Breaking Bad",
-      "tipo": "serie",
+      "tipo": "Serie",
       "anio": 2008,
       "plataforma": "Netflix",
       "puntuacion": 10,
@@ -36,7 +36,7 @@
     {
       "id": "4",
       "nombre": "Better Call Saul",
-      "tipo": "serie",
+      "tipo": "Serie",
       "anio": 2015,
       "plataforma": "Netflix",
       "puntuacion": 9,
@@ -47,7 +47,7 @@
     {
       "id": "5",
       "nombre": "The Office",
-      "tipo": "serie",
+      "tipo": "Serie",
       "anio": 2005,
       "plataforma": "Prime",
       "puntuacion": 8,
@@ -58,7 +58,7 @@
     {
       "id": "6",
       "nombre": "Superbad",
-      "tipo": "película",
+      "tipo": "Película",
       "anio": 2007,
       "plataforma": "Max",
       "puntuacion": 7,
@@ -69,7 +69,7 @@
     {
       "id": "7",
       "nombre": "The Dark Knight",
-      "tipo": "película",
+      "tipo": "Película",
       "anio": 2008,
       "plataforma": "Max",
       "puntuacion": 10,
@@ -80,7 +80,7 @@
     {
       "id": "8",
       "nombre": "Severance",
-      "tipo": "serie",
+      "tipo": "Serie",
       "anio": 2022,
       "plataforma": "AppleTV",
       "puntuacion": 9,
@@ -91,7 +91,7 @@
     {
       "id": "9",
       "nombre": "Mindhunter",
-      "tipo": "serie",
+      "tipo": "Serie",
       "anio": 2017,
       "plataforma": "Netflix",
       "puntuacion": 9,
@@ -101,7 +101,7 @@
     },
     {
       "nombre": "Peaky Blinder",
-      "tipo": "serie",
+      "tipo": "Serie",
       "anio": "2013",
       "plataforma": "AppleTV",
       "puntuacion": "6",
@@ -181,6 +181,13 @@
       "texto": "buenarda!!",
       "fecha": "2026-06-09",
       "id": "7Wj3E2Zr9TU"
+    },
+    {
+      "tituloId": 10,
+      "usuario": "Santi",
+      "texto": "excelente pelicula!!",
+      "fecha": "2026-06-11",
+      "id": "5hr-qA-S8AI"
     }
   ],
   "usuarios": [
