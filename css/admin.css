@@ -657,29 +657,216 @@
   
 }
 
+/* =========================================================
+   RESPONSIVE DESIGN (MEDIA QUERIES) - INTEGRADO CON TU JS
+   ========================================================= */
 
+@media (max-width: 992px) {
+    /* Layout Base en móviles */
+    body {
+        display: block !important;
+        overflow-x: hidden !important;
+    }
 
+    /* 1. EL BOTÓN HAMBURGUESA (.menuLogo) */
+    .menuLogo {
+        display: flex !important; /* Forzamos a que aparezca */
+        position: fixed !important;
+        top: 15px;
+        left: 15px;
+        z-index: 10000 !important;
+        background-color: var(--superficie);
+        padding: 8px;
+        border-radius: 8px;
+        border: 1px solid var(--borde);
+        cursor: pointer;
+    }
 
+    .menuLogo ion-icon {
+        font-size: 24px !important;
+        color: var(--textoPrimario);
+    }
 
-/* ── Responsive ── */
-@media (max-width: 480px) {
-  .form-card {
-    padding: 24px 18px;
-  }
+    /* 2. EL ASIDE (OCULTO POR DEFECTO A LA IZQUIERDA) */
+    aside.menuLateral {
+        position: fixed !important;
+        top: 0 !important;
+        left: -300px !important; /* Completamente escondido a la izquierda */
+        width: 280px !important;
+        height: 100vh !important;
+        background-color: var(--sidebar) !important;
+        border-right: 2px solid var(--borde) !important;
+        z-index: 9999 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 80px 20px 20px 20px !important; /* Margen superior para no pisar la hamburguesa */
+        transition: left 0.3s ease-in-out !important; /* Desplazamiento suave */
+    }
 
-  .fila-doble {
-    flex-direction: column;
-    gap: 0;
-  }
+    /* CUANDO TU JS ACTIVA EL MENÚ (Le mete .maxMenuLateral) */
+    aside.menuLateral.maxMenuLateral {
+        left: 0 !important; /* Se desliza hacia adentro de la pantalla */
+    }
 
-  .form-botones {
-    flex-direction: column-reverse;
-  }
+    /* Anulamos la clase mini que usa tu JS en escritorio para que no achique el menú en móvil */
+    aside.menuLateral.miniMenuLateral {
+        width: 280px !important; 
+    }
 
-  .btn-cancelar,
-  .btn-guardar {
-    width: 100%;
-    justify-content: center;
-    text-decoration: none;
-  }
+    /* Elementos del menú en lista vertical limpia */
+    .menu-items {
+        flex-direction: column !important;
+        gap: 12px !important;
+        margin-top: 20px !important;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .menu-items li {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .menu-items a {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        padding: 12px 16px !important;
+        font-size: 14px !important;
+        border-radius: 8px !important;
+        width: 100% !important;
+    }
+
+    /* El botón de cerrar sesión fijado abajo del panel lateral */
+    .cerrar-sesion {
+        position: absolute !important;
+        bottom: 25px !important;
+        left: 20px !important;
+        width: calc(100% - 40px) !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .cerrar-sesion a {
+        display: flex !important;
+        padding: 12px 16px !important;
+        font-size: 14px !important;
+        border-radius: 8px !important;
+    }
+
+    /* Muestra los textos (spans) dentro de la barra lateral desplegada */
+    aside.menuLateral .menu-items span,
+    aside.menuLateral .cerrar-sesion span {
+        display: inline !important;
+    }
+
+    /* 3. EL CONTENIDO PRINCIPAL (MAIN) */
+    main {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        padding: 85px 16px 24px 16px !important; /* Espacio superior para que el H1 no quede debajo del botón hamburguesa */
+        transition: none !important;
+    }
+
+    /* Anulamos márgenes raros que herede de las clases del script */
+    main.minMain {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+
+    header {
+        flex-direction: column !important;
+        gap: 14px !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+
+    .btn-agregar, 
+    .form-inline, 
+    .form-inline input, 
+    .form-inline select, 
+    .form-inline button {
+        width: 100% !important;
+    }
+
+    /* 4. TABLAS CONVERTIDAS A TARJETAS VERTICALES */
+    .contenedor-tablaTitulos-admin {
+        overflow-x: visible !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    table.table, 
+    table.table tbody, 
+    table.table th, 
+    table.table td, 
+    table.table tr {
+        display: block !important;
+    }
+
+    table.table thead {
+        display: none !important; /* Oculta cabecera horizontal */
+    }
+
+    table.table tbody tr {
+        background-color: var(--superficie) !important;
+        border: 2px solid var(--borde) !important;
+        border-radius: 12px !important;
+        margin-bottom: 16px !important;
+        padding: 14px !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    table.table tbody td {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 10px 0 !important;
+        border-bottom: 1px solid rgba(46, 46, 74, 0.4) !important;
+        font-size: 13px !important;
+        background: transparent !important;
+    }
+
+    table.table tbody td:last-child {
+        border-bottom: none !important;
+        justify-content: center !important;
+        gap: 12px !important;
+        padding-top: 14px !important;
+    }
+
+    /* Muestra las etiquetas data-label a la izquierda */
+    table.table tbody td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        color: var(--textoSecundario) !important;
+        text-transform: uppercase;
+        font-size: 11px;
+    }
+
+    table.table tbody td img {
+        width: 45px !important;
+        height: 65px !important;
+        border-radius: 6px !important;
+        object-fit: cover !important;
+    }
+
+    .acciones, .botones-modal-generos {
+        width: 100% !important;
+        gap: 8px !important;
+    }
+
+    /* 5. FORMULARIOS / MODALES FLOTANTES */
+    .modal-content, .modal-eliminar-genero {
+        width: 94% !important;
+        max-width: 400px !important;
+        padding: 20px !important;
+        margin: 20px auto !important;
+    }
+
+    .modal-actions {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
 }

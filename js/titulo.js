@@ -1,9 +1,33 @@
 //*------- main titulo -------*//
-
+const usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
 // Verificación de sesión
 if (!JSON.parse(localStorage.getItem("usuarioLogueado"))) {
   window.location.href = "login&register.html";
 }
+
+// Sidebar: nombre, rol y cerrar sesión
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("sidebarNombre").textContent =
+    usuarioLogueado.nombreUsu;
+  document.getElementById("sidebarRol").textContent = usuarioLogueado.rol;
+  const avatarImg = document.getElementById("sidebarImagen");
+  if (avatarImg) {
+    if (usuarioLogueado.imagen && usuarioLogueado.imagen.trim() !== "") {
+      avatarImg.src = usuarioLogueado.imagen;
+      
+    } else {
+      avatarImg.src = "../images/defaultAvatar.webp"; // Respaldo
+    }
+    liAdmin.style.display = usuarioLogueado.rol === "admin" ? "" : "none";
+  }else{
+    liAdmin.style.display = "none";
+  }
+  document.getElementById("btnCerrarSesion").addEventListener("click", () => {
+    localStorage.removeItem("usuarioLogueado");
+    window.location.href = "../html/login&register.html";
+  });
+});
+
 
 const logo = document.getElementById("logo");
 const menuLateral = document.querySelector(".menuLateral");

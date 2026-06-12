@@ -42,8 +42,16 @@ if (!usuarioLogueado || usuarioLogueado.rol !== "admin") {
 
 // Sidebar: nombre, rol y cerrar sesión
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("sidebarNombre").textContent = usuarioLogueado.nombre;
+  document.getElementById("sidebarNombre").textContent = usuarioLogueado.nombreUsu;
   document.getElementById("sidebarRol").textContent = usuarioLogueado.rol;
+  const avatarImg = document.getElementById("sidebarImagen");
+  if (avatarImg) {
+    if (usuarioLogueado.imagen && usuarioLogueado.imagen.trim() !== "") {
+      avatarImg.src = usuarioLogueado.imagen;
+    } else {
+      avatarImg.src = "../images/defaultAvatar.webp"; // Respaldo
+    }
+  }
   document.getElementById("btnCerrarSesion").addEventListener("click", () => {
     localStorage.removeItem("usuarioLogueado");
     window.location.href = "../html/login&register.html";
@@ -97,7 +105,7 @@ async function cargarGraficoGeneros() {
     const genero = generos[i];
 
     // cuantos titulos tiene este genero
-    const cantidad = conteo[genero.id];
+    const cantidad = conteo[genero.id] || 0;
 
     // el porcentaje de este genero
     const porcentaje = (cantidad / total) * 100;
@@ -169,7 +177,7 @@ async function cargarGraficoGeneros() {
 
   for (let i = 0; i < generos.length; i++) {
     const genero = generos[i];
-    const cantidad = conteo[genero.id];
+    const cantidad = conteo[genero.id] || 0;
     const porcentaje = ((cantidad / total) * 100).toFixed(1);
 
     const fila =
@@ -373,11 +381,11 @@ const obtenerTitulos = async () => {
     datos.forEach((titulos) => {
       const tr = d.createElement("tr");
       tr.innerHTML = `
-        <td class="contenido-tabla">${titulos.id}</td>
-        <td class="contenido-tabla">${titulos.nombre}</td>
-        <td class="contenido-tabla">${titulos.tipo}</td>
-        <td class="contenido-tabla">${titulos.plataforma}</td>
-        <td class="contenido-tabla">
+        <td data-label="ID" class="contenido-tabla">${titulos.id}</td>
+        <td data-label="Nombre" class="contenido-tabla">${titulos.nombre}</td>
+        <td data-label="Tipo" class="contenido-tabla">${titulos.tipo}</td>
+        <td data-label="Plataforma" class="contenido-tabla">${titulos.plataforma}</td>
+        <td data-label="Acciones" class="contenido-tabla">
         <ion-icon onclick="editarInputs('${titulos.id}','${titulos.nombre}','${titulos.tipo}','${titulos.anio}','${titulos.plataforma}','${titulos.puntuacion}','${titulos.estado}','${titulos.generoId}','${titulos.imagen}')" class="btn-edit" name="pencil-outline"></ion-icon>
         <ion-icon onclick="eliminarTitulo('${titulos.id}')" class="btn-del" name="trash-outline"></ion-icon>       
        `;
@@ -521,9 +529,10 @@ const obtenerGeneros = async () => {
     datos.forEach((generos) => {
       const tr = d.createElement("tr");
       tr.innerHTML = `
-        <td class="contenido-tabla">${generos.id}</td>
-        <td class="contenido-tabla">${generos.nombre}</td>
-        <td class="contenido-tabla">${generos.color}</td>
+        <td data-label="ID" class="contenido-tabla">${generos.id}</td>
+        <td data-label="Nombre" class="contenido-tabla">${generos.nombre}</td>
+        <td data-label="Color" class="contenido-tabla">${generos.color}</td>
+        <td data-label="Acciones" class="contenido-tabla">
         <ion-icon onClick="editarInputsGen('${generos.id}', '${generos.nombre}', '${generos.color}')" class="btn-edit-gen" name="pencil-outline"></ion-icon>
         <ion-icon onclick="eliminarGenero('${generos.id}', '${generos.nombre}')" class="btn-del-gen" name="trash-outline"></ion-icon>       
        `;

@@ -50,7 +50,7 @@
               <span>Géneros</span>
             </a>
           </li>
-          <li>
+          <li id="liAdmin">
             <a class="adm" href="admin.html">
               <ion-icon name="person-outline"></ion-icon>
               <span>Admin</span>
@@ -62,14 +62,15 @@
       <div class="linea"></div>
 
       <div class="usuario">
-        <img src="/images/messi.jpg" alt="foto perfil" />
-        <div class="infoUsuario">
-          <div class="nombre-rol">
-            <span class="nombre">Santi</span>
-            <span class="rol">Admin</span>
-          </div>
+            <img id="sidebarImagen" src="" alt="foto perfil">
+            <div class="infoUsuario">
+                <div class="nombre-rol">
+                    <span class="nombre" id="sidebarNombre"></span>
+                    <span class="rol" id="sidebarRol"></span>
+                </div>
+                <ion-icon id="btnCerrarSesion" name="log-out-outline" title="Cerrar sesión" style="cursor:pointer; font-size:20px; color:var(--textoSecundario); flex-shrink:0;"></ion-icon>
+            </div>
         </div>
-      </div>
     </aside>
 
     <main>

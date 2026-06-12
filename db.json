@@ -191,6 +191,7 @@
       "correo": "totomedrano25@gmail.com",
       "contrasenia": "12345",
       "rol": "admin",
+      "imagen": "https://i.pinimg.com/736x/21/fa/b9/21fab93dfac175982c1da0e4293eaf45.jpg",
       "id": "KujbNq5yfiA"
     },
     {
@@ -200,6 +201,7 @@
       "correo": "jpepe@gmail.com",
       "contrasenia": "123456",
       "rol": "usuario",
+      "imagen":"",
       "id": "cSmzenJ2WcM"
     },
     {
@@ -209,7 +211,18 @@
       "correo": "myrian@gmail.com",
       "contrasenia": "lamasguapa",
       "rol": "usuario",
+      "imagen": "",
       "id": "1JFBapBImlI"
+    },
+    {
+      "nombre": "juan cruz",
+      "apellido": "meza",
+      "nombreUsu": "9zMezita",
+      "correo": "meza@gmail.com",
+      "contrasenia": "1234",
+      "rol": "usuario",
+      "imagen": "https://img.magnific.com/vector-premium/personaje-avatar-esta-aislado_729149-194801.jpg?semt=ais_hybrid&w=740&q=80",
+      "id": "KmiQaV0Aj0s"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

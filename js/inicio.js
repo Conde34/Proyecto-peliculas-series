@@ -97,7 +97,15 @@ const sidebarRol = document.getElementById("sidebarRol");
 const btnCerrarSesion = document.getElementById("btnCerrarSesion");
 
 if (usuarioLogueado) {
-  sidebarNombre.textContent = usuarioLogueado.nombre;
+  const avatarImg = document.getElementById("sidebarImagen");
+  if (avatarImg) {
+    if (usuarioLogueado.imagen && usuarioLogueado.imagen.trim() !== "") {
+      avatarImg.src = usuarioLogueado.imagen;
+    } else {
+      avatarImg.src = "../images/defaultAvatar.webp"; // Respaldo
+    }
+  }
+  sidebarNombre.textContent = usuarioLogueado.nombreUsu;
   sidebarRol.textContent = usuarioLogueado.rol;
   liAdmin.style.display = usuarioLogueado.rol === "admin" ? "" : "none";
 } else {
