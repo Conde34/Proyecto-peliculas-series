@@ -50,7 +50,7 @@ body {
 .FormularioLogin {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 2px;
     padding: 40px;
     background-color: #1E1E30; /* Superficie */
     height: 100%;
@@ -61,7 +61,8 @@ body {
     color: #F3F4F6; /* Texto Primario */
     font-size: 26px;
     font-weight: 800;
-    margin-bottom: 12px;
+    margin-top: 20px;
+    margin-bottom: 8px;
     letter-spacing: -0.5px;
 }
 
@@ -69,7 +70,8 @@ body {
     color: #9CA3AF; /* Texto Secundario */
     font-size: 13px;
     font-weight: 600;
-    margin-bottom: -2px;
+    margin-top: 6px;
+    
 }
 
 /* Inputs integrados con tu UI oscura */
@@ -317,5 +319,220 @@ button.ghost:hover {
 @keyframes entrarToast {
     to {
         transform: translateX(0);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================================= */
+@media (max-width: 768px) {
+    body {
+        height: 100vh;
+        overflow: hidden; /* Evitamos comportamientos erráticos del fondo */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    /* Redimensionamos el contenedor principal para pantallas móviles */
+    .ContenedorLogin {
+        width: 100%;
+        max-width: 360px; /* Ancho ideal y estilizado para móviles */
+        min-height: 530px; /* Altura controlada para que quepa en cualquier celular */
+        height: 530px;
+        position: relative;
+    }
+
+    /* Mantenemos el posicionamiento absoluto para que tu JS funcione perfectamente */
+    .login-container, 
+    .register-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+
+    /* Aseguramos los estados de visibilidad con opacidad (respetando tu JS) */
+    .login-container {
+        z-index: 2;
+        opacity: 1;
+    }
+
+    .register-container {
+        z-index: 1;
+        opacity: 0;
+    }
+
+    /* Compactamos el formulario para que el Registro entre completo sin desbordar */
+    .FormularioLogin {
+        padding: 20px;
+        gap: 0px; /* Reducimos la separación general */
+        height: 100%;
+        justify-content: center;
+    }
+
+    .FormularioLogin h2 {
+        font-size: 20px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .FormularioLogin span {
+        font-size: 11px;
+        margin-top: 4px;
+        margin-bottom: 2px;
+    }
+
+    /* Achicamos ligeramente los inputs para que no ocupen tanta altura */
+    .FormularioLogin input {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    /* Botones de acción principales escalados */
+    #btnIngresar, #btnRegistrar {
+        padding: 10px;
+        font-size: 14px;
+        margin-top: 12px;
+    }
+
+   
+    .overlay-container {
+        position: absolute;
+        top: auto;
+        bottom: 15px; /* Lo situamos elegantemente al fondo del contenedor */
+        left: 0;
+        width: 100%;
+        height: 45px;
+        z-index: 100;
+        background: transparent; /* Quitamos fondos que tapen tus botones */
+        overflow: visible;
+        transition: none;
+    }
+
+    .overlay {
+        background: transparent;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: none !important;
+    }
+
+    .overlay-panel {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: opacity 0.4s ease;
+        transform: none !important;
+    }
+
+    /* Ocultamos elementos pesados del escritorio */
+    .mosaico-peliculas, 
+    .overlay-panel h3, 
+    .overlay-panel p {
+        display: none !important;
+    }
+
+    .overlay-contenido {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Estilo estilizado del botón Switcher en celular */
+    button.ghost {
+        background-color: rgba(30, 30, 48, 0.95);
+        border: 1px solid #7C3AED;
+        color: #ffffff;
+        padding: 8px 25px;
+        font-size: 12px;
+        width: auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        position: relative;
+    }
+
+    /* Ocultamos el texto real del HTML en móvil para poder controlarlo por CSS */
+    button.ghost {
+        color: transparent;
+    }
+
+    /* Si estamos en el Login (estado inicial), el botón inferior invita a Registrarse */
+    .overlay-right button.ghost::before {
+        content: "REGISTRARSE";
+        color: #ffffff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+    }
+
+    /* Si estamos en el Registro, el botón inferior invita a Iniciar Sesión */
+    .overlay-left button.ghost::before {
+        content: "INICIAR SESIÓN";
+        color: #ffffff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+    }
+
+
+    /* Intercambio de formularios */
+    .ContenedorLogin.registro-activo .login-container {
+        transform: none;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .ContenedorLogin.registro-activo .register-container {
+        transform: none;
+        opacity: 1;
+        z-index: 5;
+    }
+
+    /* Intercambio de botones inferiores del overlay */
+    .login-container ~ .overlay-container .overlay-left { opacity: 0; pointer-events: none; }
+    .login-container ~ .overlay-container .overlay-right { opacity: 1; pointer-events: all; }
+
+    .ContenedorLogin.registro-activo .overlay-container .overlay-left { opacity: 1; pointer-events: all; }
+    .ContenedorLogin.registro-activo .overlay-container .overlay-right { opacity: 0; pointer-events: none; }
+
+    .ContenedorLogin.registro-activo .overlay-container {
+        transform: none;
+    }
+}
+
+/* Ajuste extra para pantallas extremadamente pequeñas */
+@media (max-width: 360px) {
+    .ContenedorLogin {
+        max-width: 100%;
+        height: 500px;
+    }
+    .FormularioLogin input {
+        padding: 6px 10px;
+    }
+}
+
+/* Ajuste fino para celulares muy pequeños (iPhone SE, etc.) */
+@media (max-width: 375px) {
+    .ContenedorLogin {
+        min-height: 540px;
+    }
+    .FormularioLogin input {
+        padding: 10px 12px;
+    }
+    #btnIngresar, #btnRegistrar {
+        padding: 12px;
+        margin-top: 10px;
     }
 }

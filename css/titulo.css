@@ -987,6 +987,9 @@ main.minMain {
   .menuLogo {
     display: flex;
   }
+  .menuLogo ion-icon:nth-child(2) {
+    display: none;
+  }
   .menuLateral {
     left: -250px;
   }

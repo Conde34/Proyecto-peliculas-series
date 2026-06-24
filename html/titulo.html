@@ -44,7 +44,7 @@
             <span>Géneros</span>
           </a>
         </li>
-        <li>
+        <li id="liAdmin" style="display: none;">
           <a class="adm" href="admin.html">
             <ion-icon name="person-outline"></ion-icon>
             <span>Admin</span>
@@ -56,12 +56,13 @@
     <div class="linea"></div>
 
     <div class="usuario">
-      <img src="../images/messi.jpg" alt="foto perfil" />
+      <img src="" alt="foto perfil" id="sidebarImagen"/>
       <div class="infoUsuario">
         <div class="nombre-rol">
-          <span class="nombre">Santi</span>
-          <span class="rol">Admin</span>
+          <span class="nombre" id="sidebarNombre"></span>
+          <span class="rol" id="sidebarRol"></span>
         </div>
+        <ion-icon id="btnCerrarSesion" name="log-out-outline" title="Cerrar sesión" style="cursor:pointer; font-size:20px; color:var(--textoSecundario); flex-shrink:0;"></ion-icon>
       </div>
     </div>
   </aside>
@@ -118,7 +119,6 @@
       <div class="agregar-resena">
         <h3>Agregar Reseñas</h3>
         <form id="formResena">
-          <input type="text" id="usuarioResena" placeholder="Tu nombre..." />
           <textarea id="textoResena" placeholder="Escribe tu reseña aquí..." rows="4" required></textarea>
           <button type="submit" class="btn-enviar">
             <ion-icon name="send-outline"></ion-icon> Enviar Reseña

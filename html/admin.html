@@ -61,11 +61,11 @@
         <div class="linea"></div>
 
         <div class="usuario">
-            <img src="/images/messi.jpg" alt="foto perfil">
+            <img src="" alt="foto perfil" id="sidebarImagen">
             <div class="infoUsuario">
                 <div class="nombre-rol">
-                    <span class="nombre" id="sidebarNombre">Santi</span>
-                    <span class="rol" id="sidebarRol">Admin</span>
+                    <span class="nombre" id="sidebarNombre"></span>
+                    <span class="rol" id="sidebarRol"></span>
                 </div>
                 <ion-icon id="btnCerrarSesion" name="log-out-outline" title="Cerrar sesión" style="cursor:pointer; font-size:20px; color:var(--textoSecundario); flex-shrink:0;"></ion-icon>
             </div>
@@ -81,6 +81,18 @@
             
         </header>
         
+        <!-- Acceso rápido -->
+        <div class="acceso-rapido">
+            <a href="#form-titulos-admin" class="btn-acceso">
+                <ion-icon name="film-outline"></ion-icon>
+                Títulos
+            </a>
+            <a href="#form-generos-admin" class="btn-acceso">
+                <ion-icon name="pricetag-outline"></ion-icon>
+                Géneros
+            </a>
+        </div>
+
         <!-- Cards de info -->
         <section class="contenedor-cards row-cols-1 row-cols-md-3 g-4">
             <div class="card-admin">
@@ -180,8 +192,8 @@
                         </label>
                         <select class="campo-input campo-select" id="input-tipo" required>
                             <option value="" disabled selected>Seleccioná...</option>
-                            <option value="película">Película</option>
-                            <option value="serie">Serie</option>
+                            <option value="Película">Película</option>
+                            <option value="Serie">Serie</option>
                         </select>
                     </div>
 
@@ -236,21 +248,8 @@
                     </div>
                 </div>
 
-                <!-- Estado y Género ID -->
+                <!--Género ID -->
                 <div class="fila-doble">
-                    <div class="campo-grupo">
-                        <label for="input-estado" class="campo-label">
-                            <ion-icon name="checkmark-circle-outline"></ion-icon>
-                            Estado
-                        </label>
-                        <select class="campo-input campo-select" id="input-estado" required>
-                            <option value="" disabled selected>Seleccioná...</option>
-                            <option value="visto">Visto</option>
-                            <option value="viendo">Viendo</option>
-                            <option value="pendiente">Pendiente</option>
-                        </select>
-                    </div>
-
                     <div class="campo-grupo">
                         <label for="input-generoId" class="campo-label">
                             <ion-icon name="pricetag-outline"></ion-icon>

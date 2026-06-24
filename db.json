@@ -1,15 +1,14 @@
 {
   "titulos": [
     {
-      "id": "1",
       "nombre": "Inception",
       "tipo": "Película",
-      "anio": 2010,
+      "anio": "2010",
       "plataforma": "Netflix",
-      "puntuacion": 9,
-      "estado": "visto",
-      "generoId": 1,
-      "imagen": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg"
+      "puntuacion": "9",
+      "generoId": "1",
+      "imagen": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg",
+      "id": "1"
     },
     {
       "id": "2",
@@ -18,7 +17,6 @@
       "anio": 2014,
       "plataforma": "Max",
       "puntuacion": 10,
-      "estado": "visto",
       "generoId": 1,
       "imagen": "https://i.etsystatic.com/36541132/r/il/72181f/7047437338/il_fullxfull.7047437338_fncs.jpg"
     },
@@ -29,7 +27,6 @@
       "anio": 2008,
       "plataforma": "Netflix",
       "puntuacion": 10,
-      "estado": "visto",
       "generoId": 2,
       "imagen": "https://http2.mlstatic.com/D_NQ_NP_723381-MLA52911094563_122022-O.webp"
     },
@@ -40,7 +37,6 @@
       "anio": 2015,
       "plataforma": "Netflix",
       "puntuacion": 9,
-      "estado": "viendo",
       "generoId": 2,
       "imagen": "https://i.ebayimg.com/images/g/iUAAAOSwSxJjDKLb/s-l1200.jpg"
     },
@@ -51,7 +47,6 @@
       "anio": 2005,
       "plataforma": "Prime",
       "puntuacion": 8,
-      "estado": "visto",
       "generoId": 3,
       "imagen": "https://m.media-amazon.com/images/I/61faNOnBmtL._AC_UF894,1000_QL80_DpWeblab_.jpg"
     },
@@ -62,7 +57,6 @@
       "anio": 2007,
       "plataforma": "Max",
       "puntuacion": 7,
-      "estado": "pendiente",
       "generoId": 3,
       "imagen": "https://m.media-amazon.com/images/I/51ZXeIXxbML._AC_UF894,1000_QL80_.jpg"
     },
@@ -73,7 +67,6 @@
       "anio": 2008,
       "plataforma": "Max",
       "puntuacion": 10,
-      "estado": "visto",
       "generoId": 4,
       "imagen": "https://http2.mlstatic.com/D_673797-MLA86227897269_062025-C.jpg"
     },
@@ -84,7 +77,6 @@
       "anio": 2022,
       "plataforma": "AppleTV",
       "puntuacion": 9,
-      "estado": "viendo",
       "generoId": 1,
       "imagen": "https://m.media-amazon.com/images/M/MV5BZDI5YzJhODQtMzQyNy00YWNmLWIxMjUtNDBjNjA5YWRjMzExXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     },
@@ -95,7 +87,6 @@
       "anio": 2017,
       "plataforma": "Netflix",
       "puntuacion": 9,
-      "estado": "pendiente",
       "generoId": 4,
       "imagen": "https://images.squarespace-cdn.com/content/v1/5cdc39398d97405389c07510/1557943552707-JT6HXYGBOEO161J6IALX/ChelseaLowe_Mindhunter_web.jpg?format=1500w"
     },
@@ -105,10 +96,409 @@
       "anio": "2013",
       "plataforma": "AppleTV",
       "puntuacion": "6",
-      "estado": "pendiente",
       "generoId": "5",
       "imagen": "https://i.ebayimg.com/images/g/LCwAAOSwzzNl2Iva/s-l1200.jpg",
       "id": "10"
+    },
+    {
+      "id": "11",
+      "nombre": "The Matrix",
+      "tipo": "Película",
+      "anio": 1999,
+      "plataforma": "Max",
+      "puntuacion": 10,
+      "generoId": 1,
+      "imagen": "https://http2.mlstatic.com/D_NQ_NP_747069-MLA52266915152_112022-O.webp"
+    },
+    {
+      "id": "12",
+      "nombre": "Blade Runner 2049",
+      "tipo": "Película",
+      "anio": 2017,
+      "plataforma": "Netflix",
+      "puntuacion": 9,
+      "generoId": 1,
+      "imagen": "https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_.jpg"
+    },
+    {
+      "id": "13",
+      "nombre": "Arrival",
+      "tipo": "Película",
+      "anio": 2016,
+      "plataforma": "Prime",
+      "puntuacion": 9,
+      "generoId": 1,
+      "imagen": "https://m.media-amazon.com/images/M/MV5BMTExMzU0ODcxNDheQTJeQWpwZ15BbWU4MDE1OTI4MzAy._V1_.jpg"
+    },
+    {
+      "id": "14",
+      "nombre": "Black Mirror",
+      "tipo": "Serie",
+      "anio": 2011,
+      "plataforma": "Netflix",
+      "puntuacion": 9,
+      "generoId": 1,
+      "imagen": "https://m.media-amazon.com/images/M/MV5BMGRjZDBjODMtMWQ1Zi00MWRkLTk5YTMtMDU1NTNkMzhkM2QwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+    },
+    {
+      "id": "15",
+      "nombre": "Westworld",
+      "tipo": "Serie",
+      "anio": 2016,
+      "plataforma": "Max",
+      "puntuacion": 8,
+      "generoId": 1,
+      "imagen": "https://cdn.europosters.eu/image/750/59011.jpg"
+    },
+    {
+      "id": "16",
+      "nombre": "Ozark",
+      "tipo": "Serie",
+      "anio": 2017,
+      "plataforma": "Netflix",
+      "puntuacion": 9,
+      "generoId": 2,
+      "imagen": "https://m.media-amazon.com/images/I/515sDuU241L._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": "17",
+      "nombre": "The Wire",
+      "tipo": "Serie",
+      "anio": 2002,
+      "plataforma": "Max",
+      "puntuacion": 10,
+      "generoId": 2,
+      "imagen": "https://m.media-amazon.com/images/I/61cJb+LQ47L._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": "18",
+      "nombre": "Succession",
+      "tipo": "Serie",
+      "anio": 2018,
+      "plataforma": "Max",
+      "puntuacion": 10,
+      "generoId": 2,
+      "imagen": "https://media.revistagq.com/photos/643698948820974de0de66b8/master/w_1600%2Cc_limit/poster-succession.jpeg"
+    },
+    {
+      "id": "19",
+      "nombre": "The Sopranos",
+      "tipo": "Serie",
+      "anio": 1999,
+      "plataforma": "Max",
+      "puntuacion": 10,
+      "generoId": 2,
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGZb2HKiVpnapozWDdBm8pEgHoWRGaVxGwRw&s"
+    },
+    {
+      "id": "20",
+      "nombre": "Schindler's List",
+      "tipo": "Película",
+      "anio": 1993,
+      "plataforma": "Prime",
+      "puntuacion": 10,
+      "generoId": 2,
+      "imagen": "https://images.contentstack.io/v3/assets/blt13adb7e2033fcee5/blt64ce8c9acc2e49ca/6949cd5c6ae38171ff51dff8/SchindlersList_keyart_desktop_2000x3000.jpg?width=2560"
+    },
+    {
+      "id": "21",
+      "nombre": "Seinfeld",
+      "tipo": "Serie",
+      "anio": 1989,
+      "plataforma": "Netflix",
+      "puntuacion": 9,
+      "generoId": 3,
+      "imagen": "https://m.media-amazon.com/images/M/MV5BMmRjNjZjN2ItN2FkYi00ZDg0LWExN2EtMTU2ODUwNWU1M2NhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+    },
+    {
+      "id": "22",
+      "nombre": "Parks and Recreation",
+      "tipo": "Serie",
+      "anio": 2009,
+      "plataforma": "Prime",
+      "puntuacion": 8,
+      "generoId": 3,
+      "imagen": "https://m.media-amazon.com/images/I/A1A3+sVFjFL.jpg"
+    },
+    {
+      "id": "23",
+      "nombre": "It's Always Sunny in Philadelphia",
+      "tipo": "Serie",
+      "anio": 2005,
+      "plataforma": "Prime",
+      "puntuacion": 8,
+      "generoId": 3,
+      "imagen": "https://i.ebayimg.com/images/g/JrUAAOSw5VtZwsNF/s-l1200.jpg"
+    },
+    {
+      "id": "24",
+      "nombre": "The Grand Budapest Hotel",
+      "tipo": "Película",
+      "anio": 2014,
+      "plataforma": "Netflix",
+      "puntuacion": 8,
+      "generoId": 3,
+      "imagen": "https://image.tmdb.org/t/p/original/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg"
+    },
+    {
+      "id": "25",
+      "nombre": "Pulp Fiction",
+      "tipo": "Película",
+      "anio": 1994,
+      "plataforma": "Max",
+      "puntuacion": 10,
+      "generoId": 4,
+      "imagen": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
+    },
+    {
+      "id": "26",
+      "nombre": "True Detective",
+      "tipo": "Serie",
+      "anio": 2014,
+      "plataforma": "Max",
+      "puntuacion": 10,
+      "generoId": 4,
+      "imagen": "https://static0.colliderimages.com/wordpress/wp-content/uploads/sharedimages/2024/04/true-detective-poster.jpg?q=50&fit=contain&w=480&dpr=1.5"
+    },
+    {
+      "id": "27",
+      "nombre": "Zodiac",
+      "tipo": "Película",
+      "anio": 2007,
+      "plataforma": "Prime",
+      "puntuacion": 9,
+      "generoId": 4,
+      "imagen": "https://i.pinimg.com/736x/3c/51/d8/3c51d81dd52dbaaf19c8b8b0510a6c51.jpg"
+    },
+    {
+      "nombre": "Narcos",
+      "tipo": "Serie",
+      "anio": "2015",
+      "plataforma": "Netflix",
+      "puntuacion": "9",
+      "generoId": "4",
+      "imagen": "https://i.pinimg.com/750x/e2/c0/24/e2c0243cbccd4c51319713af6392c398.jpg",
+      "id": "28"
+    },
+    {
+      "id": "29",
+      "nombre": "Gone Girl",
+      "tipo": "Película",
+      "anio": 2014,
+      "plataforma": "Max",
+      "puntuacion": 9,
+      "generoId": 4,
+      "imagen": "https://m.media-amazon.com/images/M/MV5BMTk0MDQ3MzAzOV5BMl5BanBnXkFtZTgwNzU1NzE3MjE@._V1_.jpg"
+    },
+    {
+      "id": "30",
+      "nombre": "Hereditary",
+      "tipo": "Película",
+      "anio": 2018,
+      "plataforma": "Prime",
+      "puntuacion": 8,
+      "generoId": 5,
+      "imagen": "https://es.web.img2.acsta.net/pictures/18/06/06/10/24/2467257.jpg"
+    },
+    {
+      "id": "31",
+      "nombre": "The Haunting of Hill House",
+      "tipo": "Serie",
+      "anio": 2018,
+      "plataforma": "Netflix",
+      "puntuacion": 9,
+      "generoId": 5,
+      "imagen": "https://i.ebayimg.com/images/g/MCsAAOSwS6Rg3iOo/s-l1200.jpg"
+    },
+    {
+      "id": "32",
+      "nombre": "Midsommar",
+      "tipo": "Película",
+      "anio": 2019,
+      "plataforma": "Prime",
+      "puntuacion": 7,
+      "generoId": 5,
+      "imagen": "https://i.ebayimg.com/images/g/P5AAAOSwA51m2cY-/s-l1200.jpg"
+    },
+    {
+      "id": "33",
+      "nombre": "Get Out",
+      "tipo": "Película",
+      "anio": 2017,
+      "plataforma": "Prime",
+      "puntuacion": 8,
+      "generoId": 5,
+      "imagen": "https://m.media-amazon.com/images/I/91G9ewuNN9L._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": "34",
+      "nombre": "The Silence of the Lambs",
+      "tipo": "Película",
+      "anio": 1991,
+      "plataforma": "Max",
+      "puntuacion": 10,
+      "generoId": 5,
+      "imagen": "https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg"
+    },
+    {
+      "id": "35",
+      "nombre": "Stranger Things",
+      "tipo": "Serie",
+      "anio": 2016,
+      "plataforma": "Netflix",
+      "puntuacion": 8,
+      "generoId": 1,
+      "imagen": "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
+    },
+    {
+      "id": "36",
+      "nombre": "Dark",
+      "tipo": "Serie",
+      "anio": 2017,
+      "plataforma": "Netflix",
+      "puntuacion": 10,
+      "generoId": 1,
+      "imagen": "https://i.pinimg.com/736x/5e/e1/17/5ee117acc1726b5d5666de6fc8c5dfa8.jpg"
+    },
+    {
+      "id": "37",
+      "nombre": "Ex Machina",
+      "tipo": "Película",
+      "anio": 2014,
+      "plataforma": "Prime",
+      "puntuacion": 8,
+      "generoId": 1,
+      "imagen": "https://m.media-amazon.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_.jpg"
+    },
+    {
+      "id": "38",
+      "nombre": "Goodfellas",
+      "tipo": "Película",
+      "anio": 1990,
+      "plataforma": "Max",
+      "puntuacion": 10,
+      "generoId": 4,
+      "imagen": "https://i.ebayimg.com/images/g/hYUAAOSwYU1n-MKq/s-l1200.jpg"
+    },
+    {
+      "id": "39",
+      "nombre": "Fargo",
+      "tipo": "Serie",
+      "anio": 2014,
+      "plataforma": "Prime",
+      "puntuacion": 9,
+      "generoId": 4,
+      "imagen": "https://www.arte.unicen.edu.ar/cdab/wp-content/uploads/2018/11/fargo.jpg"
+    },
+    {
+      "id": "40",
+      "nombre": "American History X",
+      "tipo": "Película",
+      "anio": 1998,
+      "plataforma": "Netflix",
+      "puntuacion": 9,
+      "generoId": 2,
+      "imagen": "https://m.media-amazon.com/images/I/71Ut01QKYQL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": "41",
+      "nombre": "Prisoners",
+      "tipo": "Película",
+      "anio": 2013,
+      "plataforma": "Prime",
+      "puntuacion": 9,
+      "generoId": 4,
+      "imagen": "https://m.media-amazon.com/images/M/MV5BMTg0NTIzMjQ1NV5BMl5BanBnXkFtZTcwNDc3MzM5OQ@@._V1_.jpg"
+    },
+    {
+      "id": "42",
+      "nombre": "Chernobyl",
+      "tipo": "Serie",
+      "anio": 2019,
+      "plataforma": "Max",
+      "puntuacion": 10,
+      "generoId": 2,
+      "imagen": "https://m.media-amazon.com/images/I/51xkS6BG6oL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": "43",
+      "nombre": "Fight Club",
+      "tipo": "Película",
+      "anio": 1999,
+      "plataforma": "Netflix",
+      "puntuacion": 9,
+      "generoId": 2,
+      "imagen": "https://m.media-amazon.com/images/M/MV5BNDIzNDU0YzEtYzE5Ni00ZjlkLTk5ZjgtNjM3NWE4YzA3Nzk3XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_.jpg"
+    },
+    {
+      "id": "44",
+      "nombre": "The Boys",
+      "tipo": "Serie",
+      "anio": 2019,
+      "plataforma": "Prime",
+      "puntuacion": 9,
+      "generoId": 4,
+      "imagen": "https://i.pinimg.com/564x/85/8b/f1/858bf161788662b6dbb66a4e6bfaa147.jpg"
+    },
+    {
+      "id": "45",
+      "nombre": "Andor",
+      "tipo": "Serie",
+      "anio": 2022,
+      "plataforma": "Prime",
+      "puntuacion": 10,
+      "generoId": 1,
+      "imagen": "https://m.media-amazon.com/images/I/912xm7ZVhmL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": "46",
+      "nombre": "The Prestige",
+      "tipo": "Película",
+      "anio": 2006,
+      "plataforma": "Netflix",
+      "puntuacion": 9,
+      "generoId": 4,
+      "imagen": "https://m.media-amazon.com/images/M/MV5BMjA4NDI0MTIxNF5BMl5BanBnXkFtZTYwNTM0MzY2._V1_.jpg"
+    },
+    {
+      "id": "47",
+      "nombre": "Requiem for a Dream",
+      "tipo": "Película",
+      "anio": 2000,
+      "plataforma": "Max",
+      "puntuacion": 9,
+      "generoId": 2,
+      "imagen": "https://m.media-amazon.com/images/M/MV5BOTdiNzJlOWUtNWMwNS00NmFlLWI0YTEtZmI3YjIzZWUyY2Y3XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg"
+    },
+    {
+      "id": "48",
+      "nombre": "Annihilation",
+      "tipo": "Película",
+      "anio": 2018,
+      "plataforma": "Netflix",
+      "puntuacion": 8,
+      "generoId": 1,
+      "imagen": "https://preview.redd.it/official-netflix-poster-for-annihilation-directed-by-alex-v0-wmcj8ml7wqh01.jpg?auto=webp&s=d607516d189267bb2a1c0e1749c175780fd70df4"
+    },
+    {
+      "id": "49",
+      "nombre": "Squid Game",
+      "tipo": "Serie",
+      "anio": 2021,
+      "plataforma": "Netflix",
+      "puntuacion": 8,
+      "generoId": 4,
+      "imagen": "https://m.media-amazon.com/images/M/MV5BYWE3MDVkN2EtNjQ5MS00ZDQ4LTliNzYtMjc2YWMzMDEwMTA3XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_.jpg"
+    },
+    {
+      "id": "50",
+      "nombre": "Oppenheimer",
+      "tipo": "Película",
+      "anio": 2023,
+      "plataforma": "Prime",
+      "puntuacion": 9,
+      "generoId": 2,
+      "imagen": "https://m.media-amazon.com/images/M/MV5BMDBmYTZjNjUtN2M1MS00MTQ2LTk2ODgtNzc2M2QyZGE5NTVjXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_.jpg"
     }
   ],
   "generos": [
@@ -140,54 +530,32 @@
   ],
   "resenas": [
     {
-      "id": "1",
       "tituloId": 1,
-      "texto": "Una obra maestra del cine moderno.",
-      "fecha": "2025-07-08"
+      "usuario": "toto",
+      "texto": "Gran Pelicula! recomendada",
+      "fecha": "2026-06-24",
+      "id": "Zknw7iRXXCM"
     },
     {
-      "id": "2",
-      "tituloId": 2,
-      "texto": "La banda sonora de Hans Zimmer y el final te vuelan la cabeza.",
-      "fecha": "2025-11-14"
+      "tituloId": 4,
+      "usuario": "ElNegroTecla",
+      "texto": "El Mejor Abogado!",
+      "fecha": "2026-06-24",
+      "id": "f5xbL4Yfdd8"
     },
     {
-      "id": "3",
+      "tituloId": 16,
+      "usuario": "ElNegroTecla",
+      "texto": "Buena pinta eh",
+      "fecha": "2026-06-24",
+      "id": "aJCJX3hT24E"
+    },
+    {
       "tituloId": 3,
-      "texto": "La mejor evolución de un personaje en la historia de la televisión.",
-      "fecha": "2026-01-20"
-    },
-    {
-      "id": "4",
-      "tituloId": 5,
-      "texto": "Ideal para poner de fondo o maratonear mil veces. Michael Scott es eterno.",
-      "fecha": "2026-03-02"
-    },
-    {
-      "id": "5",
-      "tituloId": 7,
-      "texto": "El Joker de Heath Ledger es insuperable. Una película de culto.",
-      "fecha": "2026-04-15"
-    },
-    {
-      "id": "6",
-      "tituloId": 8,
-      "texto": "Te atrapa desde el primer capítulo y la premisa es brillante.",
-      "fecha": "2026-05-10"
-    },
-    {
-      "tituloId": 1,
-      "usuario": "santi",
-      "texto": "buenarda!!",
-      "fecha": "2026-06-09",
-      "id": "7Wj3E2Zr9TU"
-    },
-    {
-      "tituloId": 10,
-      "usuario": "Santi",
-      "texto": "excelente pelicula!!",
-      "fecha": "2026-06-11",
-      "id": "5hr-qA-S8AI"
+      "usuario": "9zMezita",
+      "texto": "Pinta esa me parece",
+      "fecha": "2026-06-24",
+      "id": "uDyOum_iIic"
     }
   ],
   "usuarios": [
@@ -198,6 +566,7 @@
       "correo": "totomedrano25@gmail.com",
       "contrasenia": "12345",
       "rol": "admin",
+      "imagen": "https://i.pinimg.com/736x/21/fa/b9/21fab93dfac175982c1da0e4293eaf45.jpg",
       "id": "KujbNq5yfiA"
     },
     {
@@ -207,16 +576,38 @@
       "correo": "jpepe@gmail.com",
       "contrasenia": "123456",
       "rol": "usuario",
+      "imagen": "",
       "id": "cSmzenJ2WcM"
     },
     {
-      "nombre": "Santiago",
-      "apellido": "Conde",
-      "nombreUsu": "Conde",
-      "correo": "cirujax34@gmail.com",
-      "contrasenia": "54321",
-      "rol": "admin",
+      "nombre": "Myriam",
+      "apellido": "Sanchez",
+      "nombreUsu": "MIMI",
+      "correo": "myrian@gmail.com",
+      "contrasenia": "lamasguapa",
+      "rol": "usuario",
+      "imagen": "",
       "id": "1JFBapBImlI"
+    },
+    {
+      "nombre": "juan cruz",
+      "apellido": "meza",
+      "nombreUsu": "9zMezita",
+      "correo": "meza@gmail.com",
+      "contrasenia": "1234",
+      "rol": "usuario",
+      "imagen": "https://img.magnific.com/vector-premium/personaje-avatar-esta-aislado_729149-194801.jpg?semt=ais_hybrid&w=740&q=80",
+      "id": "KmiQaV0Aj0s"
+    },
+    {
+      "nombre": "Negro",
+      "apellido": "Tecla",
+      "nombreUsu": "ElNegroTecla",
+      "correo": "negro@gmail.com",
+      "contrasenia": "negro",
+      "rol": "usuario",
+      "imagen": "https://i.scdn.co/image/ab6761610000e5ebff35cfd55701592d7ee9f988",
+      "id": "WqyKWH6NtBY"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

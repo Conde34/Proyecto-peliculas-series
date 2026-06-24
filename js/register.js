@@ -27,6 +27,8 @@ const inputApellido = document.getElementById("apellido");
 const inputNombreUsu = document.getElementById("nombreUsu");
 const inputCorreoReg = document.getElementById('correo'); 
 const inputContraseniaReg = document.getElementById("contrasenia");
+const inputImagenReg = document.getElementById("imagenRegister");
+
 
 const btnRegistrar = document.getElementById("btnRegistrar");
 
@@ -37,7 +39,7 @@ btnRegistrar.addEventListener("click", async () => {
     const nombreUsu = inputNombreUsu.value.trim();
     const correo = inputCorreoReg.value.trim();
     const contrasenia = inputContraseniaReg.value.trim();
-
+    const imagen = inputImagenReg.value.trim();
     if (
         nombre === "" ||
         apellido === "" ||
@@ -68,7 +70,8 @@ btnRegistrar.addEventListener("click", async () => {
             nombreUsu,
             correo,
             contrasenia,
-            rol: "usuario"
+            rol: "usuario",
+            imagen,
         };
 
         await axios.post("http://localhost:3000/usuarios", nuevoUsuario);
