@@ -560,3 +560,71 @@ main.minMain {
     display: none;
 
 }
+
+/* ── Responsive: tablet (601px – 900px) ── */
+@media (max-width: 900px) {
+  .tabla-container {
+    width: 80%;
+    height: auto;
+    min-height: 200px;
+  }
+
+  .tabla-generos th,
+  .tabla-generos td {
+    padding: 14px 16px;
+  }
+}
+
+/* ── Responsive: mobile (≤600px) ── */
+@media (max-width: 600px) {
+  .pagina-genero .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .titulo-generos h1 {
+    font-size: 22px;
+  }
+
+  .titulo-generos p {
+    font-size: 13px;
+  }
+
+  .tabla-container {
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+    border-radius: 12px;
+  }
+
+  .tabla-generos th {
+    padding: 12px 14px;
+    font-size: 12px;
+  }
+
+  .tabla-generos td {
+    padding: 14px 14px;
+    font-size: 13px;
+  }
+
+  .color-dot {
+    width: 14px;
+    height: 14px;
+  }
+
+  .modal {
+    margin: 0 16px;
+    padding: 24px 20px;
+  }
+
+  .modal-botones {
+    flex-direction: column-reverse;
+  }
+
+  .btn-guardar,
+  .btn-cancelar {
+    width: 100%;
+    text-align: center;
+  }
+}

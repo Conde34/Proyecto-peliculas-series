@@ -41,13 +41,13 @@ body {
   color: var(--textoSecundario);
 }
   
-  .inputSearch {
+.inputSearch {
   color: var(--textoPrimario);
   padding: 10px;
   border-radius: 8px;
   background-color: var(--fondoBase);
   border: 2px solid var(--borde);
-  
+  width: 80%;
 }
 
 /* menu logo */
@@ -262,10 +262,10 @@ main.minMain {
 }
 
 /* Selects */
-
-.selects{
+.selects {
+  margin-top: 20px;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -278,6 +278,13 @@ main.minMain {
 
 /* Tarjetas de títulos */
 
+.card-poster .label-serie {
+  background-color: var(--estadoVisto)
+}
+
+.card-poster .label-pelicula {
+  background: var(--estadoPendiente);
+}
 
 a{
   text-decoration: none;

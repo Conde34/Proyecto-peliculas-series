@@ -45,8 +45,7 @@ btnRegistrar.addEventListener("click", async () => {
         apellido === "" ||
         nombreUsu === "" ||
         correo === "" ||
-        contrasenia === "" ||
-        imagen === ""
+        contrasenia === ""
     ) {
         mostrarNotificacion("Completa todos los campos", "error");
         return;

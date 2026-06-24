@@ -870,3 +870,53 @@
         gap: 10px !important;
     }
 }
+/* ── Acceso rápido ── */
+
+.acceso-rapido {
+  display: flex;
+  gap: 10px;
+  margin: 0 10px 20px 10px;
+}
+
+.btn-acceso {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 10px;
+  border: 1px solid var(--borde);
+  background-color: var(--superficie);
+  color: var(--textoSecundario);
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+}
+
+.btn-acceso ion-icon {
+  font-size: 16px;
+}
+
+.btn-acceso:hover {
+  border-color: var(--acentoPrimario);
+  color: var(--textoPrimario);
+  background-color: rgba(124, 58, 237, 0.1);
+}
+
+@media (max-width: 992px) {
+  .acceso-rapido {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .btn-acceso {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+/* ── Ícono hamburguesa: ocultar close por defecto ── */
+.menuLogo ion-icon:nth-child(2) {
+  display: none;
+}

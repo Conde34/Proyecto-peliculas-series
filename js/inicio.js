@@ -63,7 +63,7 @@ const obtenerDatos = async () => {
             <div class="title-card">
                         <div class="card-poster">
                             <img class="card-poster" src="${titulos.imagen}">
-                            <div class="card-label">${titulos.tipo}</div>
+                            <div class="card-label ${titulos.tipo === "Serie" ? "label-serie" : "label-pelicula"}">${titulos.tipo}</div>
                         </div>
                         <div class="card-info">
                             <h3>${titulos.nombre}</h3>
@@ -71,9 +71,6 @@ const obtenerDatos = async () => {
                             <div class="card-rating">
                                 <span class="stars">★</span>
                                 <span class="rating-value">${titulos.puntuacion}/10</span>
-                            </div>
-                            <div style="margin-bottom: 10px;">
-                                <span class="card-status status-visto">${titulos.estado}</span>
                             </div>
                             <span class="card-genre">${nombreGenero}</span>
                         </div>
@@ -115,4 +112,24 @@ if (usuarioLogueado) {
 btnCerrarSesion.addEventListener("click", () => {
   localStorage.removeItem("usuarioLogueado");
   window.location.href = "../html/login&register.html";
+});
+
+
+/* BUSCADOR */
+const inputBuscador = document.getElementById("inputBuscador");
+const noEncontrado = document.getElementById("noEncontrado");
+
+inputBuscador.addEventListener("input", () => {
+  const valorBuscado = inputBuscador.value.toLowerCase().trim();
+  const tarjetas = document.querySelectorAll("#idTitulos > div");
+  let hayResultados = false;
+
+  tarjetas.forEach((tarjeta) => {
+    const nombre = tarjeta.querySelector("h3").textContent.toLowerCase();
+    const coincide = nombre.includes(valorBuscado);
+    tarjeta.style.display = coincide ? "" : "none";
+    if (coincide) hayResultados = true;
+  });
+
+  noEncontrado.style.display = hayResultados || valorBuscado === "" ? "none" : "block";
 });
