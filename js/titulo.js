@@ -8,7 +8,7 @@ if (!JSON.parse(localStorage.getItem("usuarioLogueado"))) {
 }
 
 // Sidebar: nombre, rol, visibilidad del link Admin y cerrar sesión
- const sidebarNombre = document.getElementById("sidebarNombre");
+const sidebarNombre = document.getElementById("sidebarNombre");
 const sidebarRol = document.getElementById("sidebarRol");
 const btnCerrarSesion = document.getElementById("btnCerrarSesion");
 
@@ -32,7 +32,6 @@ btnCerrarSesion.addEventListener("click", () => {
   localStorage.removeItem("usuarioLogueado");
   window.location.href = "../html/login&register.html";
 });
-
 
 const logo = document.getElementById("logo");
 const menuLateral = document.querySelector(".menuLateral");
@@ -96,6 +95,26 @@ const cargarDetallesTitulo = async () => {
 
     // Llenar información del título
     document.getElementById("tituloImagen").src = titulo.imagen;
+    const trailerUrl = titulo.trailer || "";
+    const trailerEl = document.getElementById("tituloTrailer");
+    if (!trailerUrl.trim()) {
+      trailerEl.replaceWith(
+        Object.assign(document.createElement("p"), {
+          className: "sin-trailer",
+          textContent: "No hay trailer disponible para mostrar.",
+        }),
+      );
+    } else {
+      let embedUrl = trailerUrl;
+      if (trailerUrl.includes("watch?v=")) {
+        const videoId = new URL(trailerUrl).searchParams.get("v");
+        embedUrl = `https://www.youtube.com/embed/${videoId}`;
+      } else if (trailerUrl.includes("youtu.be/")) {
+        const videoId = trailerUrl.split("youtu.be/")[1].split("?")[0];
+        embedUrl = `https://www.youtube.com/embed/${videoId}`;
+      }
+      trailerEl.src = embedUrl;
+    }
     document.getElementById("tituloNombre").textContent = titulo.nombre;
     document.getElementById("tituloAnio").textContent = titulo.anio;
     document.getElementById("tituloPlataforma").textContent = titulo.plataforma;
@@ -104,12 +123,6 @@ const cargarDetallesTitulo = async () => {
       generoMap[titulo.generoId] || "Sin género";
     document.getElementById("tituloPuntuacion").textContent =
       `${titulo.puntuacion}/10`;
-
-    const estadoEl = document.getElementById("tituloEstado");
-    estadoEl.textContent = titulo.estado;
-    if (titulo.estado === "visto") estadoEl.className = "estado-visto";
-    if (titulo.estado === "viendo") estadoEl.className = "estado-viendo";
-    if (titulo.estado === "pendiente") estadoEl.className = "estado-pendiente";
 
     // Filtrar y renderizar reseñas del título
     const resenasTitulo = resenas.filter(

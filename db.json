@@ -1,5 +1,5 @@
 {
-  "titulos": [
+"titulos": [
     {
       "nombre": "Inception",
       "tipo": "Película",
@@ -8,6 +8,7 @@
       "puntuacion": "9",
       "generoId": "1",
       "imagen": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg",
+      "trailer": "https://youtu.be/RV9L7ui9Cn8",
       "id": "1"
     },
     {
@@ -18,7 +19,8 @@
       "plataforma": "Max",
       "puntuacion": 10,
       "generoId": 1,
-      "imagen": "https://i.etsystatic.com/36541132/r/il/72181f/7047437338/il_fullxfull.7047437338_fncs.jpg"
+      "imagen": "https://i.etsystatic.com/36541132/r/il/72181f/7047437338/il_fullxfull.7047437338_fncs.jpg",
+      "trailer": "https://youtu.be/5mAbnQQiPD8?si=wC1k0hDlCVGNGMAg"
     },
     {
       "id": "3",
@@ -28,7 +30,8 @@
       "plataforma": "Netflix",
       "puntuacion": 10,
       "generoId": 2,
-      "imagen": "https://http2.mlstatic.com/D_NQ_NP_723381-MLA52911094563_122022-O.webp"
+      "imagen": "https://http2.mlstatic.com/D_NQ_NP_723381-MLA52911094563_122022-O.webp",
+      "trailer": "https://youtu.be/HhesaQXLuRY"
     },
     {
       "id": "4",
@@ -38,7 +41,8 @@
       "plataforma": "Netflix",
       "puntuacion": 9,
       "generoId": 2,
-      "imagen": "https://i.ebayimg.com/images/g/iUAAAOSwSxJjDKLb/s-l1200.jpg"
+      "imagen": "https://i.ebayimg.com/images/g/iUAAAOSwSxJjDKLb/s-l1200.jpg",
+      "trailer": "https://youtu.be/HN4oydykJFc"
     },
     {
       "id": "5",
@@ -48,7 +52,8 @@
       "plataforma": "Prime",
       "puntuacion": 8,
       "generoId": 3,
-      "imagen": "https://m.media-amazon.com/images/I/61faNOnBmtL._AC_UF894,1000_QL80_DpWeblab_.jpg"
+      "imagen": "https://m.media-amazon.com/images/I/61faNOnBmtL._AC_UF894,1000_QL80_DpWeblab_.jpg",
+      "trailer": "https://youtu.be/LwDwmCbFpX0"
     },
     {
       "id": "6",
@@ -58,7 +63,8 @@
       "plataforma": "Max",
       "puntuacion": 7,
       "generoId": 3,
-      "imagen": "https://m.media-amazon.com/images/I/51ZXeIXxbML._AC_UF894,1000_QL80_.jpg"
+      "imagen": "https://m.media-amazon.com/images/I/51ZXeIXxbML._AC_UF894,1000_QL80_.jpg",
+      "trailer": "https://youtu.be/4eGnB0vkK0c"
     },
     {
       "id": "7",
@@ -68,7 +74,8 @@
       "plataforma": "Max",
       "puntuacion": 10,
       "generoId": 4,
-      "imagen": "https://http2.mlstatic.com/D_673797-MLA86227897269_062025-C.jpg"
+      "imagen": "https://http2.mlstatic.com/D_673797-MLA86227897269_062025-C.jpg",
+      "trailer": "https://youtu.be/EXeTwQWrcwY"
     },
     {
       "id": "8",
@@ -78,7 +85,8 @@
       "plataforma": "AppleTV",
       "puntuacion": 9,
       "generoId": 1,
-      "imagen": "https://m.media-amazon.com/images/M/MV5BZDI5YzJhODQtMzQyNy00YWNmLWIxMjUtNDBjNjA5YWRjMzExXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+      "imagen": "https://m.media-amazon.com/images/M/MV5BZDI5YzJhODQtMzQyNy00YWNmLWIxMjUtNDBjNjA5YWRjMzExXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "trailer": "https://youtu.be/xEQP4VVuyrY"
     },
     {
       "id": "9",
@@ -88,16 +96,18 @@
       "plataforma": "Netflix",
       "puntuacion": 9,
       "generoId": 4,
-      "imagen": "https://images.squarespace-cdn.com/content/v1/5cdc39398d97405389c07510/1557943552707-JT6HXYGBOEO161J6IALX/ChelseaLowe_Mindhunter_web.jpg?format=1500w"
+      "imagen": "https://images.squarespace-cdn.com/content/v1/5cdc39398d97405389c07510/1557943552707-JT6HXYGBOEO161J6IALX/ChelseaLowe_Mindhunter_web.jpg?format=1500w",
+      "trailer": "https://youtu.be/lEifqZFB6_w"
     },
     {
-      "nombre": "Peaky Blinder",
+      "nombre": "Peaky Blinders",
       "tipo": "Serie",
       "anio": "2013",
       "plataforma": "AppleTV",
       "puntuacion": "6",
       "generoId": "5",
       "imagen": "https://i.ebayimg.com/images/g/LCwAAOSwzzNl2Iva/s-l1200.jpg",
+      "trailer": "https://youtu.be/oVzECfCFMSQ",
       "id": "10"
     },
     {
@@ -108,7 +118,8 @@
       "plataforma": "Max",
       "puntuacion": 10,
       "generoId": 1,
-      "imagen": "https://http2.mlstatic.com/D_NQ_NP_747069-MLA52266915152_112022-O.webp"
+      "imagen": "https://http2.mlstatic.com/D_NQ_NP_747069-MLA52266915152_112022-O.webp",
+      "trailer": "https://youtu.be/vKQi3bBA1y8"
     },
     {
       "id": "12",
@@ -118,7 +129,8 @@
       "plataforma": "Netflix",
       "puntuacion": 9,
       "generoId": 1,
-      "imagen": "https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_.jpg"
+      "imagen": "https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_.jpg",
+      "trailer": "https://youtu.be/gCcx85zbxz4"
     },
     {
       "id": "13",
@@ -128,7 +140,8 @@
       "plataforma": "Prime",
       "puntuacion": 9,
       "generoId": 1,
-      "imagen": "https://m.media-amazon.com/images/M/MV5BMTExMzU0ODcxNDheQTJeQWpwZ15BbWU4MDE1OTI4MzAy._V1_.jpg"
+      "imagen": "https://m.media-amazon.com/images/M/MV5BMTExMzU0ODcxNDheQTJeQWpwZ15BbWU4MDE1OTI4MzAy._V1_.jpg",
+      "trailer": "https://youtu.be/tFMo3UJ4B4g"
     },
     {
       "id": "14",
@@ -138,7 +151,8 @@
       "plataforma": "Netflix",
       "puntuacion": 9,
       "generoId": 1,
-      "imagen": "https://m.media-amazon.com/images/M/MV5BMGRjZDBjODMtMWQ1Zi00MWRkLTk5YTMtMDU1NTNkMzhkM2QwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+      "imagen": "https://m.media-amazon.com/images/M/MV5BMGRjZDBjODMtMWQ1Zi00MWRkLTk5YTMtMDU1NTNkMzhkM2QwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "trailer": "https://youtu.be/jDiYGjpmoFM"
     },
     {
       "id": "15",
@@ -148,7 +162,8 @@
       "plataforma": "Max",
       "puntuacion": 8,
       "generoId": 1,
-      "imagen": "https://cdn.europosters.eu/image/750/59011.jpg"
+      "imagen": "https://cdn.europosters.eu/image/750/59011.jpg",
+      "trailer": "https://youtu.be/oGlzBRJQRiI"
     },
     {
       "id": "16",
@@ -158,7 +173,8 @@
       "plataforma": "Netflix",
       "puntuacion": 9,
       "generoId": 2,
-      "imagen": "https://m.media-amazon.com/images/I/515sDuU241L._AC_UF894,1000_QL80_.jpg"
+      "imagen": "https://m.media-amazon.com/images/I/515sDuU241L._AC_UF894,1000_QL80_.jpg",
+      "trailer": "https://youtu.be/kMoNMnNkTEQ"
     },
     {
       "id": "17",
@@ -168,7 +184,8 @@
       "plataforma": "Max",
       "puntuacion": 10,
       "generoId": 2,
-      "imagen": "https://m.media-amazon.com/images/I/61cJb+LQ47L._AC_UF894,1000_QL80_.jpg"
+      "imagen": "https://m.media-amazon.com/images/I/61cJb+LQ47L._AC_UF894,1000_QL80_.jpg",
+      "trailer": "https://youtu.be/rDNNGEKdEXU"
     },
     {
       "id": "18",
@@ -178,7 +195,8 @@
       "plataforma": "Max",
       "puntuacion": 10,
       "generoId": 2,
-      "imagen": "https://media.revistagq.com/photos/643698948820974de0de66b8/master/w_1600%2Cc_limit/poster-succession.jpeg"
+      "imagen": "https://media.revistagq.com/photos/643698948820974de0de66b8/master/w_1600%2Cc_limit/poster-succession.jpeg",
+      "trailer": "https://youtu.be/OGKuCKRFSLQ"
     },
     {
       "id": "19",
@@ -188,7 +206,8 @@
       "plataforma": "Max",
       "puntuacion": 10,
       "generoId": 2,
-      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGZb2HKiVpnapozWDdBm8pEgHoWRGaVxGwRw&s"
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGZb2HKiVpnapozWDdBm8pEgHoWRGaVxGwRw&s",
+      "trailer": "https://youtu.be/0EL3_8jMQEM"
     },
     {
       "id": "20",
@@ -198,7 +217,8 @@
       "plataforma": "Prime",
       "puntuacion": 10,
       "generoId": 2,
-      "imagen": "https://images.contentstack.io/v3/assets/blt13adb7e2033fcee5/blt64ce8c9acc2e49ca/6949cd5c6ae38171ff51dff8/SchindlersList_keyart_desktop_2000x3000.jpg?width=2560"
+      "imagen": "https://images.contentstack.io/v3/assets/blt13adb7e2033fcee5/blt64ce8c9acc2e49ca/6949cd5c6ae38171ff51dff8/SchindlersList_keyart_desktop_2000x3000.jpg?width=2560",
+      "trailer": "https://youtu.be/gG22XNhtnoY"
     },
     {
       "id": "21",
@@ -208,7 +228,8 @@
       "plataforma": "Netflix",
       "puntuacion": 9,
       "generoId": 3,
-      "imagen": "https://m.media-amazon.com/images/M/MV5BMmRjNjZjN2ItN2FkYi00ZDg0LWExN2EtMTU2ODUwNWU1M2NhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+      "imagen": "https://m.media-amazon.com/images/M/MV5BMmRjNjZjN2ItN2FkYi00ZDg0LWExN2EtMTU2ODUwNWU1M2NhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "trailer": "https://youtu.be/GX19N-bPzWs"
     },
     {
       "id": "22",
@@ -218,7 +239,8 @@
       "plataforma": "Prime",
       "puntuacion": 8,
       "generoId": 3,
-      "imagen": "https://m.media-amazon.com/images/I/A1A3+sVFjFL.jpg"
+      "imagen": "https://m.media-amazon.com/images/I/A1A3+sVFjFL.jpg",
+      "trailer": "https://youtu.be/YWkBRHMNkNY"
     },
     {
       "id": "23",
@@ -228,7 +250,8 @@
       "plataforma": "Prime",
       "puntuacion": 8,
       "generoId": 3,
-      "imagen": "https://i.ebayimg.com/images/g/JrUAAOSw5VtZwsNF/s-l1200.jpg"
+      "imagen": "https://i.ebayimg.com/images/g/JrUAAOSw5VtZwsNF/s-l1200.jpg",
+      "trailer": "https://youtu.be/kJnFWO3tFEA"
     },
     {
       "id": "24",
@@ -238,7 +261,8 @@
       "plataforma": "Netflix",
       "puntuacion": 8,
       "generoId": 3,
-      "imagen": "https://image.tmdb.org/t/p/original/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg"
+      "imagen": "https://image.tmdb.org/t/p/original/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg",
+      "trailer": "https://youtu.be/1Fg5iWmQjwk"
     },
     {
       "id": "25",
@@ -248,7 +272,8 @@
       "plataforma": "Max",
       "puntuacion": 10,
       "generoId": 4,
-      "imagen": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
+      "imagen": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+      "trailer": "https://youtu.be/s7EdQ4FqbhY"
     },
     {
       "id": "26",
@@ -258,7 +283,8 @@
       "plataforma": "Max",
       "puntuacion": 10,
       "generoId": 4,
-      "imagen": "https://static0.colliderimages.com/wordpress/wp-content/uploads/sharedimages/2024/04/true-detective-poster.jpg?q=50&fit=contain&w=480&dpr=1.5"
+      "imagen": "https://static0.colliderimages.com/wordpress/wp-content/uploads/sharedimages/2024/04/true-detective-poster.jpg?q=50&fit=contain&w=480&dpr=1.5",
+      "trailer": "https://youtu.be/zwickCIHvEA"
     },
     {
       "id": "27",
@@ -268,7 +294,8 @@
       "plataforma": "Prime",
       "puntuacion": 9,
       "generoId": 4,
-      "imagen": "https://i.pinimg.com/736x/3c/51/d8/3c51d81dd52dbaaf19c8b8b0510a6c51.jpg"
+      "imagen": "https://i.pinimg.com/736x/3c/51/d8/3c51d81dd52dbaaf19c8b8b0510a6c51.jpg",
+      "trailer": "https://youtu.be/F7bAQzDM6s4"
     },
     {
       "nombre": "Narcos",
@@ -278,6 +305,7 @@
       "puntuacion": "9",
       "generoId": "4",
       "imagen": "https://i.pinimg.com/750x/e2/c0/24/e2c0243cbccd4c51319713af6392c398.jpg",
+      "trailer": "https://youtu.be/xl8zdCY-abw",
       "id": "28"
     },
     {
@@ -288,7 +316,8 @@
       "plataforma": "Max",
       "puntuacion": 9,
       "generoId": 4,
-      "imagen": "https://m.media-amazon.com/images/M/MV5BMTk0MDQ3MzAzOV5BMl5BanBnXkFtZTgwNzU1NzE3MjE@._V1_.jpg"
+      "imagen": "https://m.media-amazon.com/images/M/MV5BMTk0MDQ3MzAzOV5BMl5BanBnXkFtZTgwNzU1NzE3MjE@._V1_.jpg",
+      "trailer": "https://youtu.be/O-ZqBFd8jHI"
     },
     {
       "id": "30",
@@ -298,7 +327,8 @@
       "plataforma": "Prime",
       "puntuacion": 8,
       "generoId": 5,
-      "imagen": "https://es.web.img2.acsta.net/pictures/18/06/06/10/24/2467257.jpg"
+      "imagen": "https://es.web.img2.acsta.net/pictures/18/06/06/10/24/2467257.jpg",
+      "trailer": "https://youtu.be/V6wWKNij_1M"
     },
     {
       "id": "31",
@@ -308,7 +338,8 @@
       "plataforma": "Netflix",
       "puntuacion": 9,
       "generoId": 5,
-      "imagen": "https://i.ebayimg.com/images/g/MCsAAOSwS6Rg3iOo/s-l1200.jpg"
+      "imagen": "https://i.ebayimg.com/images/g/MCsAAOSwS6Rg3iOo/s-l1200.jpg",
+      "trailer": "https://youtu.be/4qUBHEsQlkw"
     },
     {
       "id": "32",
@@ -318,7 +349,8 @@
       "plataforma": "Prime",
       "puntuacion": 7,
       "generoId": 5,
-      "imagen": "https://i.ebayimg.com/images/g/P5AAAOSwA51m2cY-/s-l1200.jpg"
+      "imagen": "https://i.ebayimg.com/images/g/P5AAAOSwA51m2cY-/s-l1200.jpg",
+      "trailer": "https://youtu.be/1Fg5iWmQjwk"
     },
     {
       "id": "33",
@@ -328,7 +360,8 @@
       "plataforma": "Prime",
       "puntuacion": 8,
       "generoId": 5,
-      "imagen": "https://m.media-amazon.com/images/I/91G9ewuNN9L._AC_UF894,1000_QL80_.jpg"
+      "imagen": "https://m.media-amazon.com/images/I/91G9ewuNN9L._AC_UF894,1000_QL80_.jpg",
+      "trailer": "https://youtu.be/DzfpyUB60YY"
     },
     {
       "id": "34",
@@ -338,7 +371,8 @@
       "plataforma": "Max",
       "puntuacion": 10,
       "generoId": 5,
-      "imagen": "https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg"
+      "imagen": "https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+      "trailer": "https://youtu.be/6iB21hCat9E"
     },
     {
       "id": "35",
@@ -348,7 +382,8 @@
       "plataforma": "Netflix",
       "puntuacion": 8,
       "generoId": 1,
-      "imagen": "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
+      "imagen": "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+      "trailer": "https://youtu.be/b9EkMc79ZSU"
     },
     {
       "id": "36",
@@ -358,7 +393,8 @@
       "plataforma": "Netflix",
       "puntuacion": 10,
       "generoId": 1,
-      "imagen": "https://i.pinimg.com/736x/5e/e1/17/5ee117acc1726b5d5666de6fc8c5dfa8.jpg"
+      "imagen": "https://i.pinimg.com/736x/5e/e1/17/5ee117acc1726b5d5666de6fc8c5dfa8.jpg",
+      "trailer": "https://youtu.be/rrwycJ08PSA"
     },
     {
       "id": "37",
@@ -368,7 +404,8 @@
       "plataforma": "Prime",
       "puntuacion": 8,
       "generoId": 1,
-      "imagen": "https://m.media-amazon.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_.jpg"
+      "imagen": "https://m.media-amazon.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_.jpg",
+      "trailer": "https://youtu.be/EoQuVnKhxaM"
     },
     {
       "id": "38",
@@ -378,7 +415,8 @@
       "plataforma": "Max",
       "puntuacion": 10,
       "generoId": 4,
-      "imagen": "https://i.ebayimg.com/images/g/hYUAAOSwYU1n-MKq/s-l1200.jpg"
+      "imagen": "https://i.ebayimg.com/images/g/hYUAAOSwYU1n-MKq/s-l1200.jpg",
+      "trailer": "https://youtu.be/qo5jJpHtI1Y"
     },
     {
       "id": "39",
@@ -388,7 +426,8 @@
       "plataforma": "Prime",
       "puntuacion": 9,
       "generoId": 4,
-      "imagen": "https://www.arte.unicen.edu.ar/cdab/wp-content/uploads/2018/11/fargo.jpg"
+      "imagen": "https://www.arte.unicen.edu.ar/cdab/wp-content/uploads/2018/11/fargo.jpg",
+      "trailer": "https://youtu.be/EFilFPKEZmk"
     },
     {
       "id": "40",
@@ -398,7 +437,8 @@
       "plataforma": "Netflix",
       "puntuacion": 9,
       "generoId": 2,
-      "imagen": "https://m.media-amazon.com/images/I/71Ut01QKYQL._AC_UF894,1000_QL80_.jpg"
+      "imagen": "https://m.media-amazon.com/images/I/71Ut01QKYQL._AC_UF894,1000_QL80_.jpg",
+      "trailer": "https://youtu.be/6BkgAItGGSM"
     },
     {
       "id": "41",
@@ -408,7 +448,8 @@
       "plataforma": "Prime",
       "puntuacion": 9,
       "generoId": 4,
-      "imagen": "https://m.media-amazon.com/images/M/MV5BMTg0NTIzMjQ1NV5BMl5BanBnXkFtZTcwNDc3MzM5OQ@@._V1_.jpg"
+      "imagen": "https://m.media-amazon.com/images/M/MV5BMTg0NTIzMjQ1NV5BMl5BanBnXkFtZTcwNDc3MzM5OQ@@._V1_.jpg",
+      "trailer": "https://youtu.be/DvHJtez2IlY"
     },
     {
       "id": "42",
@@ -418,7 +459,8 @@
       "plataforma": "Max",
       "puntuacion": 10,
       "generoId": 2,
-      "imagen": "https://m.media-amazon.com/images/I/51xkS6BG6oL._AC_UF894,1000_QL80_.jpg"
+      "imagen": "https://m.media-amazon.com/images/I/51xkS6BG6oL._AC_UF894,1000_QL80_.jpg",
+      "trailer": "https://youtu.be/s9APLXM9Ei8"
     },
     {
       "id": "43",
@@ -428,7 +470,8 @@
       "plataforma": "Netflix",
       "puntuacion": 9,
       "generoId": 2,
-      "imagen": "https://m.media-amazon.com/images/M/MV5BNDIzNDU0YzEtYzE5Ni00ZjlkLTk5ZjgtNjM3NWE4YzA3Nzk3XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_.jpg"
+      "imagen": "https://m.media-amazon.com/images/M/MV5BNDIzNDU0YzEtYzE5Ni00ZjlkLTk5ZjgtNjM3NWE4YzA3Nzk3XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_.jpg",
+      "trailer": "https://youtu.be/qtRKdVHc-cE"
     },
     {
       "id": "44",
@@ -438,7 +481,8 @@
       "plataforma": "Prime",
       "puntuacion": 9,
       "generoId": 4,
-      "imagen": "https://i.pinimg.com/564x/85/8b/f1/858bf161788662b6dbb66a4e6bfaa147.jpg"
+      "imagen": "https://i.pinimg.com/564x/85/8b/f1/858bf161788662b6dbb66a4e6bfaa147.jpg",
+      "trailer": "https://youtu.be/M1bhOaLV4EU"
     },
     {
       "id": "45",
@@ -448,7 +492,8 @@
       "plataforma": "Prime",
       "puntuacion": 10,
       "generoId": 1,
-      "imagen": "https://m.media-amazon.com/images/I/912xm7ZVhmL._AC_UF894,1000_QL80_.jpg"
+      "imagen": "https://m.media-amazon.com/images/I/912xm7ZVhmL._AC_UF894,1000_QL80_.jpg",
+      "trailer": "https://youtu.be/cKOegEuCcfw"
     },
     {
       "id": "46",
@@ -458,7 +503,8 @@
       "plataforma": "Netflix",
       "puntuacion": 9,
       "generoId": 4,
-      "imagen": "https://m.media-amazon.com/images/M/MV5BMjA4NDI0MTIxNF5BMl5BanBnXkFtZTYwNTM0MzY2._V1_.jpg"
+      "imagen": "https://m.media-amazon.com/images/M/MV5BMjA4NDI0MTIxNF5BMl5BanBnXkFtZTYwNTM0MzY2._V1_.jpg",
+      "trailer": "https://youtu.be/o4gHCmTQDVI"
     },
     {
       "id": "47",
@@ -468,7 +514,8 @@
       "plataforma": "Max",
       "puntuacion": 9,
       "generoId": 2,
-      "imagen": "https://m.media-amazon.com/images/M/MV5BOTdiNzJlOWUtNWMwNS00NmFlLWI0YTEtZmI3YjIzZWUyY2Y3XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg"
+      "imagen": "https://m.media-amazon.com/images/M/MV5BOTdiNzJlOWUtNWMwNS00NmFlLWI0YTEtZmI3YjIzZWUyY2Y3XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+      "trailer": "https://youtu.be/aUSSfu6POKU"
     },
     {
       "id": "48",
@@ -478,7 +525,8 @@
       "plataforma": "Netflix",
       "puntuacion": 8,
       "generoId": 1,
-      "imagen": "https://preview.redd.it/official-netflix-poster-for-annihilation-directed-by-alex-v0-wmcj8ml7wqh01.jpg?auto=webp&s=d607516d189267bb2a1c0e1749c175780fd70df4"
+      "imagen": "https://preview.redd.it/official-netflix-poster-for-annihilation-directed-by-alex-v0-wmcj8ml7wqh01.jpg?auto=webp&s=d607516d189267bb2a1c0e1749c175780fd70df4",
+      "trailer": "https://youtu.be/89OP78l9oF0"
     },
     {
       "id": "49",
@@ -488,7 +536,8 @@
       "plataforma": "Netflix",
       "puntuacion": 8,
       "generoId": 4,
-      "imagen": "https://m.media-amazon.com/images/M/MV5BYWE3MDVkN2EtNjQ5MS00ZDQ4LTliNzYtMjc2YWMzMDEwMTA3XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_.jpg"
+      "imagen": "https://m.media-amazon.com/images/M/MV5BYWE3MDVkN2EtNjQ5MS00ZDQ4LTliNzYtMjc2YWMzMDEwMTA3XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_.jpg",
+      "trailer": "https://youtu.be/oqxAJKy0ii4"
     },
     {
       "id": "50",
@@ -498,7 +547,8 @@
       "plataforma": "Prime",
       "puntuacion": 9,
       "generoId": 2,
-      "imagen": "https://m.media-amazon.com/images/M/MV5BMDBmYTZjNjUtN2M1MS00MTQ2LTk2ODgtNzc2M2QyZGE5NTVjXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_.jpg"
+      "imagen": "https://m.media-amazon.com/images/M/MV5BMDBmYTZjNjUtN2M1MS00MTQ2LTk2ODgtNzc2M2QyZGE5NTVjXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_.jpg",
+      "trailer": "https://youtu.be/uYPbbksJxIg"
     }
   ],
   "generos": [
