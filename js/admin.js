@@ -7,6 +7,8 @@ const spans = document.querySelectorAll("span");
 const menuLogo = document.querySelector(".menuLogo");
 const main = document.querySelector("main");
 
+
+
 menuLogo.addEventListener("click", () => {
   menuLateral.classList.toggle("maxMenuLateral");
   const iconMenu = menuLogo.querySelector("ion-icon:nth-child(1)");
@@ -67,8 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // traer los datos del db.json y hacer el grafico
 async function cargarGraficoGeneros() {
   // traigo el archivo
-  const respuesta = await fetch("../db.json");
-  const datos = await respuesta.json();
+  const respuesta = await axios.get("../db.json");
+  const datos = await respuesta.data;
 
   // guardo los titulos y los generos en variables
   const titulos = datos.titulos;
@@ -232,8 +234,8 @@ async function cargarGraficoGeneros() {
 // traigo los datos y hago el grafico de barras con plataformas
 async function cargarGraficoPlataformas() {
   // traigo el archivo
-  const respuesta = await fetch("../db.json");
-  const datos = await respuesta.json();
+  const respuesta = await axios.get("../db.json");
+  const datos = await respuesta.data;
 
   // guardo los titulos
   const titulos = datos.titulos;
@@ -422,6 +424,7 @@ const agregarTitulo = async () => {
     const puntuacion = document.getElementById("input-puntuacion").value;
     const generoId = document.getElementById("input-generoId").value;
     const imagen = document.getElementById("input-imagen").value;
+    const trailer = document.getElementById("input-trailer").value;
 
     if (
       !nombre ||
@@ -430,7 +433,7 @@ const agregarTitulo = async () => {
       !plataforma ||
       !puntuacion ||
       !generoId ||
-      !imagen
+      !imagen || !trailer
     ) {
       alert("Por Favor, Complete todos los campos!");
     } else {
@@ -442,6 +445,7 @@ const agregarTitulo = async () => {
         puntuacion,
         generoId,
         imagen,
+        trailer,
       };
 
       const response = await axios.post("http://localhost:3000/titulos", datos);
@@ -472,6 +476,7 @@ const editarInputs = async (
   puntuacion,
   generoId,
   imagen,
+  trailer
 ) => {
   window.location.href = "#form-titulos-admin";
   document.getElementById("input-nombre").value = nombre;
@@ -481,6 +486,7 @@ const editarInputs = async (
   document.getElementById("input-puntuacion").value = puntuacion;
   document.getElementById("input-generoId").value = generoId;
   document.getElementById("input-imagen").value = imagen;
+  document.getElementById("input-trailer").value = trailer;
   idEditar = id;
   const btn = document.getElementById("btn-guardar");
 
@@ -497,6 +503,7 @@ const editarTitulos = async () => {
     const puntuacion = document.getElementById("input-puntuacion").value;
     const generoId = document.getElementById("input-generoId").value;
     const imagen = document.getElementById("input-imagen").value;
+    const trailer = document.getElementById("input-trailer").value;
 
     const datos = {
       nombre,
@@ -506,6 +513,7 @@ const editarTitulos = async () => {
       puntuacion,
       generoId,
       imagen,
+      trailer,
     };
 
     const response = await axios.put(
