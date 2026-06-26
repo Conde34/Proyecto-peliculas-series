@@ -1,5 +1,5 @@
 {
-"titulos": [
+  "titulos": [
     {
       "nombre": "Inception",
       "tipo": "Película",
@@ -549,6 +549,17 @@
       "generoId": 2,
       "imagen": "https://m.media-amazon.com/images/M/MV5BMDBmYTZjNjUtN2M1MS00MTQ2LTk2ODgtNzc2M2QyZGE5NTVjXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_.jpg",
       "trailer": "https://youtu.be/uYPbbksJxIg"
+    },
+    {
+      "nombre": "Off Camous",
+      "tipo": "Serie",
+      "anio": "2026",
+      "plataforma": "Prime",
+      "puntuacion": "8",
+      "generoId": "6",
+      "imagen": "https://static.wikia.nocookie.net/offcampus/images/6/6c/Season_1_Teaser_Poster.jpg/revision/latest/smart/width/250/height/250?cb=20260216144632",
+      "trailer": "https://youtu.be/wAozjf2frxw?si=G_vDoPIGj2kao9Pe",
+      "id": "92T61NW8vCs"
     }
   ],
   "generos": [
@@ -576,6 +587,11 @@
       "nombre": "Terror",
       "color": "#e10e0e",
       "id": "5"
+    },
+    {
+      "nombre": "Romantica",
+      "color": "#db0096",
+      "id": "6"
     }
   ],
   "resenas": [
